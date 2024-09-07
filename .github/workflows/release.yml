@@ -41,16 +41,23 @@ jobs:
           asset_content_type: application/vnd.debian.binary-package
 
   build_on_windows:
-    runs-on: windows-latest  # Изменено на windows-latest
+    runs-on: windows-latest
     permissions: write-all
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
-      - name: Install Boost
-        run: 
-          choco install boost  # Установка Boost с помощью Chocolatey
-      - run: cmake . -DPATCH_VERSION=${{ github.run_number }} 
+      - name: Download Boost
+        uses: actions/download-artifact@v3
+        with:
+          name: boost
+          path: ./boost
+      - name: Extract Boost
+        run: |
+          7z x ./boost/boost_1_81_0.zip -o./boost
+          # Удалить архив после разархивирования (необязательно)
+          rm ./boost/boost_1_81_0.zip
+      - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DBOOST_ROOT=./boost
       - run: cmake --build .
       - run: cmake --build . --target test
       - run: cmake --build . --target package
@@ -71,6 +78,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./helloworld-0.0.${{ github.run_number }}-Windows.exe  # Изменен формат файла
-          asset_name: helloworld-0.0.${{ github.run_number }}-Windows.exe  # Изменен формат файла
-          asset_content_type: application/x-msdownload  # Изменен тип контента
+          asset_path: ./helloworld-0.0.${{ github.run_number }}-Windows.exe
+          asset_name: helloworld-0.0.${{ github.run_number }}-Windows.exe
+          asset_content_type: application/x-msdownload
