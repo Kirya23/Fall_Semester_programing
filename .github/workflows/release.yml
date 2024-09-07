@@ -43,22 +43,6 @@ jobs:
   build_on_windows:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Upload Boost
-        uses: actions/upload-artifact@v3
-        with:
-          name: boost
-          path: ./boost
-      - name: Download Boost
-        uses: actions/download-artifact@v3
-        with:
-          name: boost
-          path: ./boost
-      - name: Extract Boost
-        run: |
-          7z x ./boost/boost_1_81_0.zip -o./boost
-          # Удалить архив после разархивирования (необязательно)
-          rm ./boost/boost_1_81_0.zip
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DBOOST_ROOT=./boost
       - run: cmake --build .
       - run: cmake --build . --target test
