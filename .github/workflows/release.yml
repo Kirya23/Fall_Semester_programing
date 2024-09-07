@@ -48,7 +48,7 @@ jobs:
         with:
           submodules: true
       - name: Install Boost
-        run: | 
+        run: 
           choco install boost  # Установка Boost с помощью Chocolatey
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} 
       - run: cmake --build .
