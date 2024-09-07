@@ -49,9 +49,7 @@ jobs:
           submodules: true
       - name: Download Boost
         uses: actions/download-artifact@v3
-        with:
-          name: boost
-          path: ./boost
+        
       - name: Extract Boost
         run: |
           7z x ./boost/boost_1_81_0.zip -o./boost
