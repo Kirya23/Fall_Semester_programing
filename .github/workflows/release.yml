@@ -41,8 +41,12 @@ jobs:
           asset_content_type: application/vnd.debian.binary-package
 
   build_on_windows:
-    runs-on: windows-latest
-    steps:
+      runs-on: windows-latest  # Изменено на windows-latest
+      permissions: write-all
+      steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DBOOST_ROOT=./boost
       - run: cmake --build .
       - run: cmake --build . --target test
