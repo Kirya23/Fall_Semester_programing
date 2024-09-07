@@ -44,12 +44,19 @@ jobs:
     runs-on: windows-latest
     permissions: write-all
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           submodules: true
-      - name: Download Boost
-        uses: actions/download-artifact@v4
-
+      - name: Upload Boost Archive
+        uses: actions/upload-artifact@v3
+        with:
+          name: boost-archive
+          path: ./boost/boost_1_81_0.zip
+      - name: Download Boost Archive
+        uses: actions/download-artifact@v3
+        with:
+          name: boost-archive
+          path: ./boost
       - name: Extract Boost
         run: |
           7z x ./boost/boost_1_81_0.zip -o./boost
