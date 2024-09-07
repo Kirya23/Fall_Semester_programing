@@ -5,7 +5,7 @@ on:
     branches:
       - main
       - feature/github_actions
-
+      
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -41,16 +41,28 @@ jobs:
           asset_content_type: application/vnd.debian.binary-package
 
   build_on_windows:
-      runs-on: windows-latest  # Изменено на windows-latest
+      runs-on: windows-latest
       permissions: write-all
       steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
+      - name: Install 7zip
+        run: choco install 7zip -y
+      - name: Download Boost
+        uses: actions/download-artifact@v3
+        with:
+          name: boost
+          path: ./boost
+      - name: Extract Boost
+        run: |
+          7z x ./boost/boost_1_81_0.zip -o./boost
+          # Удалить архив после разархивирования (необязательно)
+          rm ./boost/boost_1_81_0.zip
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DBOOST_ROOT=./boost
-      - run: cmake --build .
-      - run: cmake --build . --target test
-      - run: cmake --build . --target package
+      - run: cmake --build . --config Release
+      - run: cmake --build . --target test --config Release
+      - run: cmake --build . --target package --config Release
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
