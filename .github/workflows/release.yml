@@ -47,11 +47,6 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
-      - name: Upload Boost Archive
-        uses: actions/upload-artifact@v3
-        with:
-          name: boost-archive
-          path: ./boost/boost_1_81_0.zip
       - name: Download Boost Archive
         uses: actions/download-artifact@v3
         with:
