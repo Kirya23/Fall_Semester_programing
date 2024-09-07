@@ -41,7 +41,10 @@ jobs:
           asset_content_type: application/vnd.debian.binary-package
   test:
     needs: [build-on-ubuntu]
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [windows-latest,ubuntu-latest]
+    runs-on: ${{matrix.os}}
     permissions: write-all
     steps:
       - uses: actions/checkout@v3
