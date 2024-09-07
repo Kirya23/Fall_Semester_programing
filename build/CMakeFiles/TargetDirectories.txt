@@ -1,0 +1,12 @@
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/helloworld_cli.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/helloworld.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/test_version.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/package.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/package_source.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/test.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/edit_cache.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/rebuild_cache.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/list_install_components.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/install.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/install/local.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester-programing--1/build/CMakeFiles/install/strip.dir
