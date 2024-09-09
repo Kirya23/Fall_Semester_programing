@@ -73,11 +73,7 @@ jobs:
         # Проверьте, что команда сборки корректна
       - run: cmake --build . --target package --config Release
         # Проверьте, что команда упаковки корректна
-      - name: Upload Release Asset
-        uses: actions/upload-artifact@v3
-        with:
-          name: release-zip_2
-          path: ./your-project-name-Release.zip # Путь к Release ZIP-архиву
+   
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
