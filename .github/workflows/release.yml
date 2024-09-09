@@ -86,8 +86,8 @@ jobs:
       - name: Upload Debug Asset
         uses: actions/upload-artifact@v3
         with:
-          name: debug-zip
-          path: ./your-project-name-Debug.zip # Путь к Debug DEB-архиву
+          name: debug-deb
+          path: ./your-project-name-Debug.deb # Путь к Debug DEB-архиву
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
