@@ -76,9 +76,8 @@ jobs:
       - name: Upload Release Asset
         uses: actions/upload-artifact@v3
         with:
-          name: release-zip
+          name: release-zip_2
           path: ./your-project-name-Release.zip # Путь к Release ZIP-архиву
-      
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
