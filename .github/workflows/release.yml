@@ -57,40 +57,36 @@ jobs:
           asset_name: helloworld-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
 
-  # build_on_MacOS:
-  #   runs-on: macos-latest # Изменено на macOS-latest
-  #   permissions: write-all
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #       with:
-  #         submodules: true
-  #     - name: Install Boost
-  #       run: |
-  #         brew install boost # Установка Boost с помощью Homebrew
-  #     - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release 
-  #       # Проверьте опции и настройки в CMakeLists.txt
-  #     - run: cmake --build . --config Release
-  #       # Проверьте, что команда сборки корректна
-  #     - run: cmake --build . --target package --config Release
-  #       # Проверьте, что команда упаковки корректна
-   
-  #     - name: Create Release
-  #       id: create_release
-  #       uses: actions/create-release@v1
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       with:
-  #         tag_name: ${{ github.run_number }}
-  #         release_name: Release ${{ github.run_number }}
-  #         draft: false
-  #         prerelease: false
-  #     - name: Upload Release Asset
-  #       id: upload-release-asset
-  #       uses: actions/upload-release-asset@v1
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       with:
-  #         upload_url: ${{ steps.create_release.outputs.upload_url }}
-  #         asset_path: ./helloworld-0.0.${{ github.run_number }}-macOS.zip # Изменен формат файла
-  #         asset_name: helloworld-0.0.${{ github.run_number }}-macOS.zip # Изменен формат файла
-  #         asset_content_type: application/zip # Изменен тип контента
+  build_on_MacOS:
+    runs-on: macos-latest
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Install Boost
+        run: |
+          brew install boost
+      - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build . --config Release
+      - run: cmake --build . --target package --config Release 
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./helloworld-0.0.${{ github.run_number }}-macOS.zip
+          asset_name: helloworld-0.0.${{ github.run_number }}-macOS.zip
+          asset_content_type: application/zip
