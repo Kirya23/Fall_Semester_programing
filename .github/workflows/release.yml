@@ -41,35 +41,19 @@ jobs:
           asset_content_type: application/vnd.debian.binary-package
 
   build_on_windows:
-    runs-on: windows-latest
+    runs-on: macos-latest # Изменено на macOS-latest
+    permissions: write-all
     steps:
-      - uses: actions/checkout@v3
-      - name: Upload Boost
-        uses: actions/upload-artifact@v3
+      - uses: actions/checkout@v4
         with:
-          name: boost-archive
-          path: ./boost
-      - name: Download Boost
-        uses: actions/download-artifact@v3
-        with:
-          name: boost-archive
-          path: ./boost
-      - name: Extract Boost
+          submodules: true
+      - name: Install Boost
         run: |
-          7z x ./boost/boost_1_81_0.zip -o./boost
-          rm ./boost/boost_1_81_0.zip
-      - name: Configure Boost
-        run: |
-          cd ./boost/boost_1_81_0
-          bootstrap.bat
-      - name: Build Boost
-        run: |
-          cd ./boost/boost_1_81_0
-          b2
-      - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DBOOST_ROOT=./boost/boost_1_81_0
-      - run: cmake --build . --config Release
-      - run: cmake --build . --target test --config Release
-      - run: cmake --build . --target package --config Release
+          brew install boost # Установка Boost с помощью Homebrew
+      - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
+      - run: cmake --build .
+      - run: cmake --build . --target test
+      - run: cmake --build . --target package
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -87,6 +71,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./helloworld-0.0.${{ github.run_number }}-Windows.exe
-          asset_name: helloworld-0.0.${{ github.run_number }}-Windows.exe
-          asset_content_type: application/x-msdownload
+          asset_path: ./helloworld-0.0.${{ github.run_number }}-macOS.zip # Изменен формат файла
+          asset_name: helloworld-0.0.${{ github.run_number }}-macOS.zip # Изменен формат файла
+          asset_content_type: application/zip # Изменен тип контента
