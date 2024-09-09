@@ -7,7 +7,7 @@ on:
       - feature/github_actions
       
 jobs:
-  build:
+  build_on_Ubuntu:
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
@@ -40,7 +40,7 @@ jobs:
           asset_name: helloworld-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
 
-  build_on_windows:
+  build_on_MacOS:
     runs-on: macos-latest # Изменено на macOS-latest
     permissions: write-all
     steps:
