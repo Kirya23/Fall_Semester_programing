@@ -91,6 +91,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./helloworld-0.0.${{ github.run_number }}-macOS.zip # Изменен формат файла
-          asset_name: helloworld-0.0.${{ github.run_number }}-macOS.zip # Изменен формат файла
-          asset_content_type: application/zip # Изменен тип контента
+          asset_path: ./helloworld-0.0.${{ github.run_number }}-macOS.deb # Изменен формат файла
+          asset_name: helloworld-0.0.${{ github.run_number }}-macOS.deb # Изменен формат файла
+          asset_content_type: application/deb # Изменен тип контента
