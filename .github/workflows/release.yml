@@ -70,7 +70,7 @@ jobs:
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release
       - run: cmake --build . --config Release
       - run: cmake --build . --target package --config Release 
-      - name: Create Release
+      - name: Create Release 2
         id: create_release
         uses: actions/create-release@v1
         env:
