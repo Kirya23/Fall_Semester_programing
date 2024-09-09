@@ -71,7 +71,7 @@ jobs:
       - run: cmake --build . --config Release
       - run: cmake --build . --target package --config Release 
       - name: Create Release 2
-        id: create_release
+        id: create_release_2
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
