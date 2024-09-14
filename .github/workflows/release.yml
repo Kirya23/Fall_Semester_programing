@@ -43,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
+          release_name: Release ${{ github.run_number }} for linux
           draft: false
           prerelease: false
       - name: Upload Release Asset
@@ -77,7 +77,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         with:
           tag_name: ${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
+          release_name: Release ${{ github.run_number }} for mac
           draft: false
           prerelease: false
       - name: Upload Release Asset mac
