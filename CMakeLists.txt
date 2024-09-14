@@ -65,14 +65,6 @@ if(CMAKE_BUILD_TYPE STREQUAL "Release")
      set(CPACK_GENERATOR DEB)
    endif()
 
-# Package for macOS
-if(APPLE)
-  add_custom_target(package
-    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_BINARY_DIR}/Release ${CMAKE_CURRENT_SOURCE_DIR}/helloworld-0.0.${{ github.run_number }}-macOS
-    COMMAND ${CMAKE_COMMAND} -E tar czf ${CMAKE_CURRENT_SOURCE_DIR}/helloworld-0.0.${{ github.run_number }}-macOS.zip ${CMAKE_CURRENT_SOURCE_DIR}/helloworld-0.0.${{ github.run_number }}-macOS
-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-    )
-endif()
 
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
 set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
@@ -85,3 +77,12 @@ include(CPack)
 enable_testing()
 
 add_test(test_version test_version)
+
+# Package for macOS
+if(APPLE)
+  add_custom_target(package
+    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_BINARY_DIR}/Release ${CMAKE_CURRENT_SOURCE_DIR}/helloworld-0.0.${{ github.run_number }}-macOS
+    COMMAND ${CMAKE_COMMAND} -E tar czf ${CMAKE_CURRENT_SOURCE_DIR}/helloworld-0.0.${{ github.run_number }}-macOS.zip ${CMAKE_CURRENT_SOURCE_DIR}/helloworld-0.0.${{ github.run_number }}-macOS
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    )
+endif()
