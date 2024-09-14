@@ -42,7 +42,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.run_number }} for Linux
+          tag_name: ${{ github.run_number }}-Linux
           release_name: Release ${{ github.run_number }} for linux
           draft: false
           prerelease: false
@@ -52,7 +52,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release_linux.outputs.upload_url }}
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./helloworld-0.0.${{ github.run_number }}-Linux.deb
           asset_name: helloworld-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
@@ -76,11 +76,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         with:
-          tag_name: ${{ github.run_number }} for mac
+          tag_name: ${{ github.run_number }}-mac 
           release_name: Release ${{ github.run_number }} for mac
           draft: false
           prerelease: false
-      - name: Upload Release Asset mac
+      - name: Upload Release Asset mac ji
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
