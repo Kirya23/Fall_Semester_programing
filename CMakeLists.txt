@@ -54,14 +54,7 @@ else ()
         -Wall -Wextra -pedantic -Werror
     )
 endif()
-# Packaging for macOS
-if(APPLE)
-  add_custom_target(package
-    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_BINARY_DIR}/Release ${CMAKE_CURRENT_SOURCE_DIR}/helloworld-0.0.$ENV{VERSION_NUMBER}-macOS 
-    COMMAND ${CMAKE_COMMAND} -E tar czf ${CMAKE_CURRENT_SOURCE_DIR}/helloworld-0.0.$ENV{VERSION_NUMBER}-macOS.zip ${CMAKE_CURRENT_SOURCE_DIR}/helloworld-0.0.$ENV{VERSION_NUMBER}-macOS
-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-  )
-endif()
+
 
 install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
 
