@@ -88,7 +88,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release_.outputs.upload_url }}
-          asset_path: C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/helloworld-0.0.${{ github.run_number }}-macOS.zip
-          # C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\helloworld-0.0.55-macOS.zip
+          asset_path: C:/Users/runner/work/Fall_Semester_programing/Fall_Semester_programing/helloworld-0.0.${{ github.run_number }}-macOS.zip
+          # C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/helloworld-0.0.${{ github.run_number }}-macOS.zip
           asset_name: helloworld-0.0.${{ github.run_number }}-macOS.zip
           asset_content_type: application/zip
