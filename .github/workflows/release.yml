@@ -70,8 +70,8 @@ jobs:
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release
       - run: cmake --build . --config Release
       - run: cmake --build . --target package --config Release 
-      - name: Create Release 2
-        id: create_release_2
+      - name: Create Release_mac
+        id: create_release_
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -80,7 +80,7 @@ jobs:
           release_name: Release ${{ github.run_number }}
           draft: false
           prerelease: false
-      - name: Upload Release Asset
+      - name: Upload Release Asset mac
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
