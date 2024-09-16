@@ -91,7 +91,7 @@ jobs:
         run: ls -la output
   
       - name: Zip output
-        run: zip -r ./helloworld-0.0.20-macOS.zip ./output
+        run: zip -r ./helloworld-0.0.${{ github.run_number }}-macOS.zip ./output
 
       - name: Upload Release Asset 
         uses: actions/upload-release-asset@v1
