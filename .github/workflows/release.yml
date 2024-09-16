@@ -82,8 +82,17 @@ jobs:
           prerelease: false
 
       - name: Create output directory
-        run: mkdir helloworld-0.0.${{ github.run_number }}-macOS.zip
-        
+        run: mkdir output
+  
+      - name: Generate Hello World text file
+        run: echo "Hello, world!" > output/helloworld.txt
+  
+      - name: List output directory
+        run: ls -la output
+  
+      - name: Zip output
+        run: zip -r ./helloworld-0.0.20-macOS.zip ./output
+
       - name: Upload Release Asset 
         uses: actions/upload-release-asset@v1
         with:
