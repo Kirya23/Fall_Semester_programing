@@ -5,7 +5,8 @@ on:
     branches:
       - main
       - feature/github_actions
-      
+  release:
+    types: [published]
 jobs:
   build_on_Ubuntu:
     runs-on: ubuntu-latest
@@ -61,32 +62,107 @@ jobs:
     runs-on: macos-latest
     permissions: write-all
     steps:
-              - uses: actions/checkout@v4
-                with:
-                  submodules: true
-              - name: Install Boost
-                run: |
-                  brew install boost
-              - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release -DVERSION_NUMBER=${{ github.run_number }}
-              - run: cmake --build . --config Release
-              - run: cmake --build . --target package --config Release
-              - name: Create Release_mac
-                id: create_release_
-                uses: actions/create-release@v1
-                env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                with:
-                  tag_name: ${{ github.run_number }}-mac
-                  release_name: Release ${{ github.run_number }} for mac
-                  draft: false
-                  prerelease: false
-              - name: Upload Release Asset
-                id: upload-release-asset
-                uses: actions/upload-release-asset@v1
-                env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                with:
-                  upload_url: ${{ steps.create_release_.outputs.upload_url }}
-                  asset_path: ./helloworld-0.0.${{ github.run_number }}-macOS.zip 
-                  asset_name: helloworld-0.0.${{ github.run_number }}-macOS.zip
-                  asset_content_type: application/zip
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Install Boost
+        run: |
+          brew install boost
+      - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build . --config Release
+      - run: cmake --build . --target package --config Release 
+      - name: Create Release_mac
+        id: create_release_
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        with:
+          tag_name: ${{ github.run_number }}-mac 
+          release_name: Release ${{ github.run_number }} for mac
+          draft: false
+          prerelease: false
+      - name: Build project
+        run: |
+            mkdir output
+            echo "Hello, world!" > output/helloworld.txt
+            zip -r ./helloworld-0.0.${{ github.run_number }}-macOS.zip ./output
+  
+
+      - name: List files in the directory
+        run: ls -la
+ 
+      - name: Upload Release Asset 
+        uses: actions/upload-release-asset@v1
+        with:
+            upload_url: ${{ steps.create_release_.outputs.upload_url }}
+            asset_path: ./helloworld-0.0.${{ github.run_number }}-macOS.zip
+            asset_name: helloworld-0.0.${{ github.run_number }}-macOS.zip 
+            asset_content_type: application/zip
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+  
+  # build_on_Windows:
+  #   runs-on: windows-latest
+  #   permissions: write-all
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         submodules: true
+
+  #     - name: Install vcpkg
+  #       run: |
+  #         git clone https://github.com/microsoft/vcpkg.git
+  #         .\vcpkg\bootstrap-vcpkg.bat
+
+  #     - name: Install Boost
+  #       run: .\vcpkg\vcpkg install boost-test # Укажите необходимые компоненты
+
+  #     - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release -DVCPKG_ROOT=${{ github.workspace }}\vcpkg
+  #       # Проверьте опции и настройки в CMakeLists.txt
+        
+  #     - run: cmake --build . --config Release
+  #       # Проверьте, что команда сборки корректна
+        
+  #     - run: cmake --build . --target package --config Release
+  #       # Проверьте, что команда упаковки корректна
+        
+  #     - name: Upload Release Asset
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         name: release-zip
+  #         path: ./your-project-name-Release.zip # Путь к Release ZIP-архиву
+
+  #     - name: Build Debug
+  #       run: |
+  #         cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Debug -DVCPKG_ROOT=${{ github.workspace }}\vcpkg
+  #         cmake --build . --config Debug
+  #         cmake --build . --target package --config Debug
+
+  #     - name: Upload Debug Asset
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         name: debug-deb
+  #         path: ./your-project-name-Debug.zip # Путь к Debug ZIP-архиву
+
+  #     - name: Create Release
+  #       id: create_release
+  #       uses: actions/create-release@v1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       with:
+  #         tag_name: ${{ github.run_number }}-Windows
+  #         release_name: Release ${{ github.run_number }} for Windows
+  #         draft: false
+  #         prerelease: false
+
+  #     - name: Upload Release Asset
+  #       id: upload-release-asset
+  #       uses: actions/upload-release-asset@v1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       with:
+  #         upload_url: ${{ steps.create_release.outputs.upload_url }}
+  #         asset_path: ./helloworld-0.0.${{ github.run_number }}-Windows.zip # Путь к созданному zip-файлу
+  #         asset_name: helloworld-0.0.${{ github.run_number }}-Windows.zip
+  #         asset_content_type: application/zip
