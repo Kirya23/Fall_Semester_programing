@@ -83,8 +83,10 @@ jobs:
       - name: Build project
         run: |
             mkdir output
-            echo "Hello, world!" > output/helloworld.txt
+            echo cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release > output/helloworld.txt
+            
             zip -r ./helloworld-0.0.${{ github.run_number }}-macOS.zip ./output
+
       - name: Upload Release Asset 
         uses: actions/upload-release-asset@v1
         with:
