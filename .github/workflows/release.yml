@@ -80,6 +80,10 @@ jobs:
           release_name: Release ${{ github.run_number }} for mac
           draft: false
           prerelease: false
+
+      - name: Create output directory
+        run: mkdir helloworld-0.0.${{ github.run_number }}-macOS.zip
+        
       - name: Upload Release Asset 
         uses: actions/upload-release-asset@v1
         with:
