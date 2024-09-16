@@ -83,9 +83,9 @@ jobs:
       - name: Build project
         run: |
             mkdir output
-            echo cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release 
-            echo cmake --build . --config Release > 
-            echo cmake --build . --target package --config Release  > 
+            echo cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release > output/helloworld.txt
+            echo cmake --build . --config Release > output/helloworld.txt 
+            echo cmake --build . --target package --config Release  > output/helloworld.txt 
             zip -r ./helloworld-0.0.${{ github.run_number }}-macOS.zip ./output
 
       - name: Upload Release Asset 
