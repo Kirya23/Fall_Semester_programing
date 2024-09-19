@@ -15,6 +15,7 @@ jobs:
         with:
           submodules: true
       - run: sudo apt-get update && sudo apt-get install libboost-test-dev -y
+      
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release 
         # Проверьте опции и настройки в CMakeLists.txt
       - run: cmake --build . --config Release
@@ -81,17 +82,6 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Create output directory
-        run: mkdir output
-  
-      - name: Generate Hello World text file
-        run: echo "Hello, world!" > output/helloworld.txt
-  
-      - name: List output directory
-        run: ls -la output
-  
-      - name: Zip output
-        run: zip -r ./helloworld-0.0.${{ github.run_number }}-macOS.zip ./output
 
       - name: Upload Release Asset 
         uses: actions/upload-release-asset@v1
