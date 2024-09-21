@@ -75,7 +75,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: release-zip
-          path: ./your-project-name-Release.zip # Путь к Release ZIP-архиву
+          path: ./helloworld-0.0.${{ github.run_number }}-macOS.zip # Путь к Release ZIP-архиву
       - name: Create Release_mac
         id: create_release_
         uses: actions/create-release@v1
