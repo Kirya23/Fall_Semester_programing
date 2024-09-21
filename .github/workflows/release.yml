@@ -76,12 +76,6 @@ jobs:
         with:
           name: release-zip
           path: ./your-project-name-Release.zip # Путь к Release ZIP-архиву
-      - name: Build Debug
-        run: |
-          cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Debug
-          cmake --build . --config Debug
-          cmake --build . --target package --config Debug
-      
       - name: Create Release_mac
         id: create_release_
         uses: actions/create-release@v1
