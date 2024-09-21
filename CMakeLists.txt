@@ -80,8 +80,8 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET 10.14)
 
 # Определение архитектуры (ARM64 для Apple Silicon) 😊
 if(APPLE)
-    set(CMAKE_OSX_ARCHITECTURES arm64) 😊
-    set(CMAKE_OSX_SYSROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk) 😊 
+    set(CMAKE_OSX_ARCHITECTURES arm64) 
+    set(CMAKE_OSX_SYSROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk) 
 endif()
 
 # Установка исполняемого файла в директорию bin при установке
