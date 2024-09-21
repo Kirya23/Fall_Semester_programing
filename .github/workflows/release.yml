@@ -14,24 +14,24 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
-      # - run: sudo apt-get update && sudo apt-get install libboost-test-dev -y
+      - run: sudo apt-get update && sudo apt-get install libboost-test-dev -y
       
-      # - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release 
-      #   # Проверьте опции и настройки в CMakeLists.txt
-      # - run: cmake --build . --config Release
-      #   # Проверьте, что команда сборки корректна
-      # - run: cmake --build . --target package --config Release
-      #   # Проверьте, что команда упаковки корректна
+      - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release 
+        # Проверьте опции и настройки в CMakeLists.txt
+      - run: cmake --build . --config Release
+        # Проверьте, что команда сборки корректна
+      - run: cmake --build . --target package --config Release
+        # Проверьте, что команда упаковки корректна
       - name: Upload Release Asset
         uses: actions/upload-artifact@v3
         with:
           name: release-zip
           path: ./your-project-name-Release.zip # Путь к Release ZIP-архиву
-      # - name: Build Debug
-      #   run: |
-      #     cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Debug
-      #     cmake --build . --config Debug
-      #     cmake --build . --target package --config Debug
+      - name: Build Debug
+        run: |
+          cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Debug
+          cmake --build . --config Debug
+          cmake --build . --target package --config Debug
       - name: Upload Debug Asset
         uses: actions/upload-artifact@v3
         with:
