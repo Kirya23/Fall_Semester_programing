@@ -8,20 +8,20 @@ on:
   
 jobs:
   build_on_Ubuntu:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     permissions: write-all
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: true
-      - run: sudo apt-get update && sudo apt-get install libboost-test-dev -y
+      # - run: sudo apt-get update && sudo apt-get install libboost-test-dev -y
       
-      - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release 
-        # Проверьте опции и настройки в CMakeLists.txt
-      - run: cmake --build . --config Release
-        # Проверьте, что команда сборки корректна
-      - run: cmake --build . --target package --config Release
-        # Проверьте, что команда упаковки корректна
+      # - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release 
+      #   # Проверьте опции и настройки в CMakeLists.txt
+      # - run: cmake --build . --config Release
+      #   # Проверьте, что команда сборки корректна
+      # - run: cmake --build . --target package --config Release
+      #   # Проверьте, что команда упаковки корректна
       - name: Upload Release Asset
         uses: actions/upload-artifact@v3
         with:
@@ -47,16 +47,15 @@ jobs:
           release_name: Release ${{ github.run_number }} for linux
           draft: false
           prerelease: false
-      - name: Upload Release Asset
-        id: upload-release-asset
+      - name: Upload Release Asset 
         uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./helloworld-0.0.${{ github.run_number }}-Linux.deb
-          asset_name: helloworld-0.0.${{ github.run_number }}-Linux.deb
-          asset_content_type: application/vnd.debian.binary-package
+                    upload_url: ${{ steps.create_release.outputs.upload_url }}
+                    asset_path: ./helloworld-0.0.${{ github.run_number }}-macos.zip
+                    asset_name: helloworld-0.0.${{ github.run_number }}-macos.zip
+                    asset_content_type: application/zip
+        env:
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # build_on_MacOS:
   #   runs-on: macos-latest
