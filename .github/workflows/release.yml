@@ -81,18 +81,14 @@ jobs:
           cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Debug
           cmake --build . --config Debug
           cmake --build . --target package --config Debug
-      - name: Upload Debug Asset
-        uses: actions/upload-artifact@v3
-        with:
-          name: debug-deb
-          path: ./your-project-name-Debug.deb # Путь к Debug DEB-архиву
+      
       - name: Create Release_mac
         id: create_release_
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
         with:
-          tag_name: ${{ github.run_number }}-mac 
+          tag_name: ${{ github.run_number }}-Macos 
           release_name: Release ${{ github.run_number }} for mac
           draft: false
           prerelease: false
