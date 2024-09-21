@@ -81,7 +81,9 @@ jobs:
           release_name: Release ${{ github.run_number }} for mac
           draft: false
           prerelease: false
-      
+      - name: Print asset path
+        run: |
+          echo "asset path: ${{ runner.workspace }}/helloworld-0.0.84-macOS.zip"
       - name: Upload Release Asset 
         uses: actions/upload-release-asset@v1
         with:
