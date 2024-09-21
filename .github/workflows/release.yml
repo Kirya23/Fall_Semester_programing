@@ -71,11 +71,7 @@ jobs:
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release
       - run: cmake --build . --config Release
       - run: cmake --build . --target package --config Release 
-      - name: Upload Release Asset
-        uses: actions/upload-artifact@v3
-        with:
-          name: release-zip
-          path: ./helloworld-0.0.${{ github.run_number }}-macOS.zip # Путь к Release ZIP-архиву
+      
       - name: Create Release_mac
         id: create_release_
         uses: actions/create-release@v1
@@ -86,6 +82,9 @@ jobs:
           release_name: Release ${{ github.run_number }} for mac
           draft: false
           prerelease: false
+      - name: Print asset path
+        run: | 
+          echo "Asset path: ${{ runner.workspace }}/helloworld-0.0.${{ github.run_number }}-macOS.zip" 
       - name: Upload Release Asset 
         uses: actions/upload-release-asset@v1
         with:
