@@ -71,7 +71,9 @@ jobs:
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release
       - run: cmake --build . --config Release
       - run: cmake --build . --target package --config Release 
-      
+      - name: Create release archive
+        run: |
+          tar -czvf helloworld-0.0.${{ github.run_number }}-macOS.zip .
       - name: Create Release_mac
         id: create_release_
         uses: actions/create-release@v1
@@ -89,7 +91,7 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
             upload_url: ${{ steps.create_release_.outputs.upload_url }}
-            asset_path: ../Users/runner/work/Fall_Semester_programing/helloworld-0.0.${{ github.run_number }}-macOS.zip
+            asset_path: ./helloworld-0.0.${{ github.run_number }}-macOS.zip
             asset_name: helloworld-0.0.${{ github.run_number }}-macOS.zip
             asset_content_type: application/zip
         env:
