@@ -86,6 +86,9 @@ endif()
 
 # Установка исполняемого файла в директорию bin при установке 
 install(TARGETS helloworld_cli RUNTIME DESTINATION bin) 
+install(TARGETS helloworld ARCHIVE DESTINATION lib)
+install(DIRECTORY include/ DESTINATION include)
+
 
 # Проверяет  режим  сборки (Сам написал 😁))  
 if(CMAKE_BUILD_TYPE STREQUAL "Release") 
