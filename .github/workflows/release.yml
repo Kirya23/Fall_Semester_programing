@@ -71,7 +71,7 @@ jobs:
           
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release
       - run: cmake --build . --config Release
-      - run: cmake --build . --target package --config Release 
+      - run:  cmake --build . --target install --config Release
 
       - name: Create Release_mac
         id: create_release_
