@@ -39,10 +39,11 @@ target_link_libraries(test_version
 )
 
 if (MSVC)
-    set(CMAKE_CXX_FLAGS "/W4")
-else ()
-    set(CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic -Werror")
-endif()
+         set(CMAKE_CXX_FLAGS "/W4")
+     else ()
+         # Удалите -Werror, если он вам не нужен
+         set(CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic") 
+     endif()
 
 target_compile_options(helloworld_cli PRIVATE ${CMAKE_CXX_FLAGS})
 target_compile_options(helloworld PRIVATE ${CMAKE_CXX_FLAGS})
