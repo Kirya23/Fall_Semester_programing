@@ -22,7 +22,21 @@ jobs:
         # Проверьте, что команда сборки корректна
       - run: cmake --build . --target package --config Release
         # Проверьте, что команда упаковки корректна
-      
+      - name: Upload Release Asset
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-zip
+          path: ./your-project-name-Release.zip # Путь к Release ZIP-архиву
+      - name: Build Debug
+        run: |
+          cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Debug
+          cmake --build . --config Debug
+          cmake --build . --target package --config Debug
+      - name: Upload Debug Asset
+        uses: actions/upload-artifact@v3
+        with:
+          name: debug-deb
+          path: ./your-project-name-Debug.deb # Путь к Debug DEB-архиву
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -67,12 +81,21 @@ jobs:
           release_name: Release ${{ github.run_number }} for mac
           draft: false
           prerelease: false
-      - name: Build project
+      - name: Upload Release Asset
+        uses: actions/upload-artifact@v3
+        with:
+            name: release-zip
+            path: ./your-project-name-Release.zip # Путь к Release ZIP-архиву
+      - name: Build Debug
         run: |
-            mkdir output
-            echo "Hello, world!" > output/helloworld.txt
-            zip -r ./helloworld-0.0.${{ github.run_number }}-macOS.zip ./output
-  
+              cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Debug
+              cmake --build . --config Debug
+              cmake --build . --target package --config Debug
+      - name: Upload Debug Asset
+        uses: actions/upload-artifact@v3
+        with:
+              name: debug-deb
+              path: ./your-project-name-Debug.deb # Путь к Debug DEB-архиву
 
       - name: List files in the directory
         run: ls -la
