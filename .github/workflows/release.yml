@@ -68,8 +68,8 @@ jobs:
       - name: Install Boost
         run: |
           brew install boost
-           - name: Configure CMake
-      - run: cmake . -DCPACK_GENERATOR=ZIP 
+      - name: Configure CMake
+        run: cmake . -DCPACK_GENERATOR=ZIP 
            -DPATCH_VERSION=${{ github.run_number }} 
            -DCMAKE_BUILD_TYPE=Release 
            -DCMAKE_INSTALL_PREFIX=build/release
