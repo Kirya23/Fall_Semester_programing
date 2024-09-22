@@ -85,33 +85,32 @@ if(APPLE)
 endif() 
 
 # Установка исполняемого файла в директорию bin при установке 
-install(TARGETS helloworld_cli RUNTIME DESTINATION bin) 
+install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
 install(TARGETS helloworld ARCHIVE DESTINATION lib)
 install(DIRECTORY include/ DESTINATION include)
 
-
-# Проверяет  режим  сборки (Сам написал 😁))  
+# Проверяет  режим  сборки (Сам написал 😁))   
 if(CMAKE_BUILD_TYPE STREQUAL "Release") 
     set(CPACK_GENERATOR ZIP) 
 elseif(CMAKE_BUILD_TYPE STREQUAL "Debug") 
     set(CPACK_GENERATOR DEB)  
 endif() 
 
-# Устанавливает  параметры  пакета  для  CPack:  номер  версии  и  контактную  информацию.  
+# Устанавливает  параметры  пакета  для  CPack:  номер  версии  и  контактную  информацию.   
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}") 
 set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}") 
 set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}") 
 
 set(CPACK_PACKAGE_CONTACT example@example.com) 
-# Включает  модуль  CPack  для  создания  установочных  пакетов.  
+# Включает  модуль  CPack  для  создания  установочных  пакетов.   
 include(CPack) 
 
 #  Добавить  команду  упаковки  в  CMakeLists.txt
-add_custom_target(create_package ALL 
-    COMMAND ${CMAKE_COMMAND} -E tar cfz helloworld-${PROJECT_VESRION}-macOS.zip bin include lib
+add_custom_target(create_package ALL  
+    COMMAND ${CMAKE_COMMAND} -E tar cfz helloworld-${PROJECT_VESRION}-macOS.zip bin include lib 
     COMMAND ${CMAKE_COMMAND} -E message "Creating package helloworld-${PROJECT_VESRION}-macOS.zip")
 
-# Включает  режим  тестирования  для  CMake.  
-enable_testing() 
+# Включает  режим  тестирования  для  CMake.   
+enable_testing()  
 # Добавляет  тест  с  именем  test_version,  используя  исполняемый  файл  test_version.  
 add_test(test_version test_version)
