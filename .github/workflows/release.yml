@@ -81,19 +81,11 @@ jobs:
           release_name: Release ${{ github.run_number }} for mac
           draft: false
           prerelease: false
-      - name: Upload Release Asset
-        uses: actions/upload-artifact@v3
-        with:
-            name: release-zip
-            path: ./your-project-name-Release.zip # Путь к Release ZIP-архиву
-      - name: Build Debug
+      - name: Build project
         run: |
-          ls -lag
-      - name: Upload Debug Asset
-        uses: actions/upload-artifact@v3
-        with:
-              name: debug-deb
-              path: ./your-project-name-Debug.deb # Путь к Debug DEB-архиву
+            mkdir output
+            echo "Hello, world!" > output/helloworld.txt
+            zip -r ./helloworld-0.0.${{ github.run_number }}-macOS.zip ./output
 
       - name: List files in the directory
         run: ls -la
