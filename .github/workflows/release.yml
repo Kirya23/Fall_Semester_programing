@@ -58,7 +58,7 @@ jobs:
   #         asset_name: helloworld-0.0.${{ github.run_number }}-Linux.deb
   #         asset_content_type: application/vnd.debian.binary-package
 
-  build_on_MacOS:
+ build_on_MacOS:
     runs-on: macOS-latest
     permissions: write-all
     steps:
@@ -68,33 +68,34 @@ jobs:
       - name: Install Boost
         run: |
           brew install boost
-      - run: cmake -DCPACK_GENERATOR=ZIP    
-      - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release
-      - run: cmake --build . --config Release
-      - run: cmake --build . --target package --config Release 
-
+      - name: Configure CMake
+        run: cmake . -DCPACK_GENERATOR=ZIP 
+            -DPATCH_VERSION=${{ github.run_number }} 
+            -DCMAKE_BUILD_TYPE=Release
+      - name: Build and Install
+        run: cmake --build . --config Release 
       - name: Create Release_mac
         id: create_release_
         uses: actions/create-release@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.run_number }}-macOS 
+          tag_name: ${{ github.run_number }}-macOS
           release_name: Release ${{ github.run_number }} for mac
           draft: false
           prerelease: false
       - name: Print asset path
-        run: | 
-          echo "Asset path: ${{ runner.workspace }}/helloworld-0.0.${{ github.run_number }}-macOS.zip" 
-      - name: Upload Release Asset 
+        run: |
+          echo "Asset path: ${{ runner.workspace }}/build/helloworld-0.0.${{ github.run_number }}-macOS.zip"
+      - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
         with:
-            upload_url: ${{ steps.create_release_.outputs.upload_url }}
-            asset_path: ./build/release/helloworld-0.0.${{ github.run_number }}-macOS.zip
-            asset_name: helloworld-0.0.${{ github.run_number }}-macOS.zip
-            asset_content_type: application/zip
+          upload_url: ${{ steps.create_release_.outputs.upload_url }}
+          asset_path: ./build/helloworld-0.0.${{ github.run_number }}-macOS.zip # Измените путь, если нужно
+          asset_name: helloworld-0.0.${{ github.run_number }}-macOS.zip
+          asset_content_type: application/zip
         env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
   
   # build_on_Windows:
