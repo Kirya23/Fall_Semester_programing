@@ -68,11 +68,11 @@ jobs:
       - name: Install Boost
         run: |
           brew install boost
-      - name: Configure CMake
-        run: cmake . -DCPACK_GENERATOR=ZIP \
-            -DPATCH_VERSION=${{ github.run_number }} \
-            -DCMAKE_BUILD_TYPE=Release \
-            -DCMAKE_INSTALL_PREFIX=build/release # Установка в build/release
+           - name: Configure CMake
+      - run: cmake . -DCPACK_GENERATOR=ZIP 
+           -DPATCH_VERSION=${{ github.run_number }} 
+           -DCMAKE_BUILD_TYPE=Release 
+           -DCMAKE_INSTALL_PREFIX=build/release
       - name: Build and Install
         run: cmake --build . --config Release 
       - name: Create Release_mac

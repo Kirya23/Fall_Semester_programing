@@ -66,5 +66,5 @@ enable_testing()
 add_test(test_version test_version)
 
 # Установка целевых объектов в директорию build/release
-install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
-install(TARGETS helloworld RUNTIME DESTINATION lib)
+install(TARGETS helloworld_cli RUNTIME DESTINATION build/release/bin)
+install(TARGETS helloworld RUNTIME DESTINATION build/release/lib)
