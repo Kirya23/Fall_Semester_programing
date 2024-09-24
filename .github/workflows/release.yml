@@ -92,7 +92,8 @@ jobs:
           release_name: Release ${{ github.run_number }} (MacOS)
           draft: false # Не публикуем релиз в черновике
           prerelease: false # Не публикуем как предварительную версию
-      # Загружаем релизный ассет для MacOS
+      
+          # Загружаем релизный ассет для MacOS
       - name: Upload Release Asset (MacOS)
         id: upload-release-asset-macos
         uses: actions/upload-release-asset@v1
