@@ -16,7 +16,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.28.1/CMakeSystem.cmake"
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/CMakeFiles/3.28.1/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -290,7 +290,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.28.1/CMakeCCompiler.cmake"
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/CMakeFiles/3.28.1/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -544,7 +544,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake"
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -618,7 +618,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.28.1/CMakeRCCompiler.cmake"
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/CMakeFiles/3.28.1/CMakeRCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -697,7 +697,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.28.1/CMakeCCompiler.cmake"
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/CMakeFiles/3.28.1/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -796,7 +796,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "build/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake"
+			"path" : "out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -845,7 +845,7 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
+		"build" : "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)",
 		"source" : "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing"
 	},
 	"version" : 
