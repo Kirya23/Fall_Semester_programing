@@ -29,7 +29,7 @@ int main() {
     vector<IPAddress> ipAddresses;
 
     // Чтение IP-адресов из файла ip_filter.tsv
-    ifstream file("._ip_filter.tsv");
+    ifstream file("ip_filter.tsv");
     if (!file.is_open()) {
         cerr << "Ошибка открытия файла ip_filter.tsv" << endl;
         return 1;
@@ -56,7 +56,7 @@ int main() {
              << static_cast<int>(ip.n3) << "."
              << static_cast<int>(ip.n4) << endl;
     }
-
+    
     // Вывод IP-адресов с первым байтом 1
     for (const auto& ip : ipAddresses) {
         if (ip.n1 == 1) {
@@ -66,7 +66,6 @@ int main() {
                  << static_cast<int>(ip.n4) << endl;
         }
     }
-
     // Вывод IP-адресов с первым байтом 46 и вторым байтом 70
     for (const auto& ip : ipAddresses) {
         if (ip.n1 == 46 && ip.n2 == 70) {
@@ -76,7 +75,6 @@ int main() {
                  << static_cast<int>(ip.n4) << endl;
         }
     }
-
     // Вывод IP-адресов с байтом 46
     for (const auto& ip : ipAddresses) {
         if (ip.n1 == 46 || ip.n2 == 46 || ip.n3 == 46 || ip.n4 == 46) {
