@@ -40,7 +40,7 @@ int main() {
         // Разделение строки на части
         stringstream ss(line);
         string ipString;
-        getline(ss, ipString, '\t'); // Чтение IP-адресаф
+        getline(ss, ipString, '\t'); // Чтение IP-адреса
         ipAddresses.push_back(IPAddress(ipString));
     }
 
