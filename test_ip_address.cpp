@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "ip_address.h"  // Замените на фактический путь к вашему заголовочному файлу
+#include "mian.h"  // Замените на фактический путь к вашему заголовочному файлу
 
 // Тест для конструктора IPAddress
 TEST(IPAddressTest, ValidIP) {
