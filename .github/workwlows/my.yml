@@ -16,11 +16,8 @@ jobs:
         with:
           submodules: true
       # Установка Google Test
-      - run: sudo apt-get update && sudo apt-get install libgtest-dev -y && sudo apt-get install cmake -y 
-      # Компиляция Google Test
-      - run: |
-      cd /usr/src/gtest && sudo cmake . && sudo make && sudo cp libgtest*.a /usr/lib
-
+      - run: sudo apt-get update && sudo apt-get install libgtest-dev -y
+      
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release 
         # Проверьте опции и настройки в CMakeLists.txt
       - run: cmake --build . --config Release
