@@ -6,7 +6,6 @@
 #include <tuple>
 #include <cstdint>
 
-
 using namespace std;
 
 // Структура для хранения IP-адреса
