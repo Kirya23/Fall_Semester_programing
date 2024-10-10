@@ -1,0 +1,82 @@
+name: 'C++ CI'
+
+on:
+ push:
+  branches:
+   - main
+   - lab2
+   - feature/github_actions
+ release:
+  types: [published]
+
+jobs:
+ build_on_Ubuntu:
+  runs-on: ubuntu-latest
+  permissions: write-all
+  steps:
+   - uses: actions/checkout@v4
+    with:
+     submodules: true
+   # Установка Google Test
+   - run: sudo apt-get update && sudo apt-get install libgtest-dev -y && sudo apt-get install cmake -y
+
+   # Компиляция Google Test
+   - run: |
+      cd /usr/src/gtest && sudo cmake . && sudo make && sudo cp libgtest*.a /usr/lib
+
+   # Конфигурируем проект с помощью CMake
+   - run: cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Release 
+
+   # Строим проект 
+   - run: cmake --build . --config Release 
+
+   # Запускаем тесты 
+   - run: cmake --build . --target test --config Release # Добавили --config Release
+
+   # Упаковка проекта 
+   - run: cmake --build . --target create_package --config Release 
+
+   # Загружаем ассет релиза 
+   - name: Upload Release Asset 
+    uses: actions/upload-artifact@v3 
+    with: 
+     name: release-zip 
+     path: ./your-project-name-Release.zip # Путь к Release ZIP-архиву 
+
+   # Собираем отладочную версию 
+   - name: Build Debug 
+    run: | 
+      cmake . -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Debug 
+      cmake --build . --config Debug 
+      cmake --build . --target create_package --config Debug 
+
+   # Загружаем отладочный ассет 
+   - name: Upload Debug Asset 
+    uses: actions/upload-artifact@v3 
+    with: 
+     name: debug-deb 
+     path: ./your-project-name-Debug.deb # Путь к Debug DEB-архиву 
+
+   # Создаем релиз 
+   - name: Create Release 
+    id: create_release 
+    uses: actions/create-release@v1 
+    env: 
+     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+    with: 
+     tag_name: ${{ github.run_number }}-Linux 
+     release_name: Release ${{ github.run_number }} for linux 
+     draft: false 
+     prerelease: false 
+
+   # Загружаем релизный ассет 
+   - name: Upload Release Asset 
+    id: upload-release-asset 
+    uses: actions/upload-release-asset@v1 
+    env: 
+     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+    with: 
+     upload_url: ${{ steps.create_release.outputs.upload_url }} 
+     asset_path: ./helloworld-0.0.${{ github.run_number }}-Linux.deb 
+     asset_name: helloworld-0.0.${{ github.run_number }}-Linux.deb 
+     asset_content_type: application/vnd.debian.binary-package
