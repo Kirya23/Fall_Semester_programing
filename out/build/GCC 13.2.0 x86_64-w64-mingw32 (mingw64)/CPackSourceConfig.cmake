@@ -29,7 +29,7 @@ set(CPACK_IGNORE_FILES "/CVS/;/\\.svn/;/\\.bzr/;/\\.hg/;/\\.git/;\\.swp\$;\\.#;/
 set(CPACK_INNOSETUP_ARCHITECTURE "x64")
 set(CPACK_INSTALLED_DIRECTORIES "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing;/")
 set(CPACK_INSTALL_CMAKE_PROJECTS "")
-set(CPACK_INSTALL_PREFIX "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/install/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)")
+set(CPACK_INSTALL_PREFIX "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/install")
 set(CPACK_MODULE_PATH "")
 set(CPACK_NSIS_DISPLAY_NAME "lab2 0.1.0")
 set(CPACK_NSIS_INSTALLER_ICON_CODE "")

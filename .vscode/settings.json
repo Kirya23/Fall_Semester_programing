@@ -3,6 +3,11 @@
         "tuple": "cpp",
         "ostream": "cpp",
         "iostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "bitset": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "stdexcept": "cpp",
+        "algorithm": "cpp"
     }
 }
