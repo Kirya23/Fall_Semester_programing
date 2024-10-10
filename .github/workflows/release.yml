@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - lab2
       - feature/github_actions
   release:
     types: [published]
