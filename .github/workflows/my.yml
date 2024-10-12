@@ -12,45 +12,46 @@ on:
 jobs:
  build_on_Ubuntu:
   runs-on: ubuntu-latest
-  permissions: read-all # Изменили на read-all
+  permissions: read-all
   steps:
   - uses: actions/checkout@v4
     with:
-     submodules: true
+      submodules: true
   - name: Install Dependencies
     run: |
-     sudo apt-get update
-     sudo apt-get install -y build-essential cmake libgtest-dev
-
+      sudo apt-get update
+      sudo apt-get install -y build-essential cmake libgtest-dev
   - name: Build Project
     run: |
-     mkdir build
-     cd build
-     cmake .. -DCMAKE_BUILD_TYPE=Release
-     cmake --build . --config Release
+      mkdir build
+      cd build
+      cmake .. -DCMAKE_BUILD_TYPE=Release
+      cmake --build . --config Release
   - name: Run Tests
     run: |
-     cd build
-     gtest 
+      cd build
+      ctest -V # Добавлен -V для verbose output
   - name: Create and Upload Release Asset
     uses: actions/upload-release-asset@v1
     env:
-     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     with:
-     upload_url: ${{ steps.create_release.outputs.upload_url }}
-     asset_path: ./lab2-Release.zip
-     asset_name: lab2-Release.zip
-     asset_content_type: application/x-tar 
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+      asset_path: ./lab2-Release.zip
+      asset_name: lab2-Release.zip
+      asset_content_type: application/zip # Исправленный тип содержимого
   - name: Create Release
     id: create_release
     uses: actions/create-release@v1
     env:
-     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     with:
-     tag_name: ${{ github.run_number }}-Linux
-     release_name: Release ${{ github.run_number }} for Linux
-     draft: false
-     prerelease: false
+      tag_name: ${{ github.run_number }}-Linux
+      release_name: Release ${{ github.run_number }} for Linux
+      draft: false
+      prerelease: false
+
+
 
 #  build_macos:
 #   runs-on: macos-latest
