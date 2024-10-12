@@ -84,4 +84,4 @@ include(CPack)
 
 # Настройка тестов
 enable_testing()
-add_test(test_lab2 test_lab2)
+add_test(test_ip_address test_ip_address)
