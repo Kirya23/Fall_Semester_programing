@@ -34,16 +34,10 @@ target_include_directories(lab2
  PRIVATE "${CMAKE_BINARY_DIR}" 
 )
 
-# Связываем lab2 с Google Test
-
-
 # Связываем lab2_cli с lab2
 target_link_libraries(lab2_cli 
  PRIVATE lab2 
 )
-
-# Связываем test_ip_address с Google Test
-
 
 # Флаги компилятора
 if (MSVC)

@@ -1,9 +1,11 @@
 {
-	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "liblab2.a"
+			"path" : "test_ip_address.exe"
+		},
+		{
+			"path" : "test_ip_address.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -11,10 +13,8 @@
 	{
 		"commands" : 
 		[
-			"add_library",
-			"target_compile_options",
-			"target_include_directories",
-			"set_target_properties"
+			"add_executable",
+			"target_compile_options"
 		],
 		"files" : 
 		[
@@ -28,25 +28,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 18,
+				"line" : 24,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 66,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 33,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
-				"line" : 27,
+				"line" : 64,
 				"parent" : 0
 			}
 		]
@@ -57,7 +45,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++14"
+					"fragment" : "-g"
 				},
 				{
 					"backtrace" : 2,
@@ -76,31 +64,35 @@
 					"fragment" : "-Werror"
 				}
 			],
-			"includes" : 
-			[
-				{
-					"backtrace" : 3,
-					"path" : "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)"
-				}
-			],
 			"language" : "CXX",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					4
-				],
-				"standard" : "14"
-			},
 			"sourceIndexes" : 
 			[
 				0
 			]
 		}
 	],
-	"id" : "lab2::@6890427a1f51a3e7e1df",
-	"name" : "lab2",
-	"nameOnDisk" : "liblab2.a",
+	"id" : "test_ip_address::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "test_ip_address",
+	"nameOnDisk" : "test_ip_address.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -125,5 +117,5 @@
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "STATIC_LIBRARY"
+	"type" : "EXECUTABLE"
 }
