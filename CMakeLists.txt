@@ -11,7 +11,7 @@ find_package(GTest REQUIRED)
 # Включаем FindGTest
 include(FindGTest) 
 if(gtest_FOUND) 
- message(STATUS "Found GTest: ${gtest_INCLUDE_DIRS}") 
+ message(STATUS "Found GTest: ${gtest_INCLUDE_DIRS}")
 endif() 
 
 # Добавляем библиотеку lab2
