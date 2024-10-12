@@ -105,6 +105,39 @@ build lab2_cli.exe: CXX_EXECUTABLE_LINKER__lab2_cli_Debug CMakeFiles/lab2_cli.di
   TARGET_IMPLIB = liblab2_cli.dll.a
   TARGET_PDB = lab2_cli.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target test_ip_address
+
+
+#############################################
+# Order-only phony target for test_ip_address
+
+build cmake_object_order_depends_target_test_ip_address: phony || CMakeFiles/test_ip_address.dir
+
+build CMakeFiles/test_ip_address.dir/test_ip_address.cpp.obj: CXX_COMPILER__test_ip_address_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/test_ip_address.cpp || cmake_object_order_depends_target_test_ip_address
+  DEP_FILE = CMakeFiles\test_ip_address.dir\test_ip_address.cpp.obj.d
+  FLAGS = -g -Wall -Wextra -pedantic -Werror
+  OBJECT_DIR = CMakeFiles\test_ip_address.dir
+  OBJECT_FILE_DIR = CMakeFiles\test_ip_address.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_ip_address
+
+
+#############################################
+# Link the executable test_ip_address.exe
+
+build test_ip_address.exe: CXX_EXECUTABLE_LINKER__test_ip_address_Debug CMakeFiles/test_ip_address.dir/test_ip_address.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\test_ip_address.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = test_ip_address.exe
+  TARGET_IMPLIB = libtest_ip_address.dll.a
+  TARGET_PDB = test_ip_address.exe.dbg
+
 
 #############################################
 # Utility command for package
@@ -213,6 +246,8 @@ build lab2: phony liblab2.a
 
 build lab2_cli: phony lab2_cli.exe
 
+build test_ip_address: phony test_ip_address.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -221,7 +256,7 @@ build lab2_cli: phony lab2_cli.exe
 #############################################
 # Folder: C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)
 
-build all: phony liblab2.a lab2_cli.exe
+build all: phony liblab2.a lab2_cli.exe test_ip_address.exe
 
 # =============================================================================
 # Built-in targets

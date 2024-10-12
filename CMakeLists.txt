@@ -20,6 +20,9 @@ add_library(lab2 test_ip_address.cpp)
 # Добавляем исполняемый файл lab2_cli
 add_executable(lab2_cli main.cpp)
 
+# Добавляем тестовый исполняемый файл
+add_executable(test_ip_address test_ip_address.cpp)
+
 # Устанавливаем общие свойства для lab2
 set_target_properties(lab2 PROPERTIES 
  CXX_STANDARD 14 
@@ -31,11 +34,16 @@ target_include_directories(lab2
  PRIVATE "${CMAKE_BINARY_DIR}" 
 )
 
+# Связываем lab2 с Google Test
+
 
 # Связываем lab2_cli с lab2
 target_link_libraries(lab2_cli 
  PRIVATE lab2 
 )
+
+# Связываем test_ip_address с Google Test
+
 
 # Флаги компилятора
 if (MSVC)
@@ -48,6 +56,9 @@ if (MSVC)
  target_compile_options(test_lab2 PRIVATE 
   /W4 
  )
+ target_compile_options(test_ip_address PRIVATE 
+  /W4 
+ )
 else ()
  target_compile_options(lab2_cli PRIVATE 
   -Wall -Wextra -pedantic -Werror 
@@ -55,7 +66,8 @@ else ()
  target_compile_options(lab2 PRIVATE 
   -Wall -Wextra -pedantic -Werror 
  )
- target_compile_options(lab2 PRIVATE 
+
+ target_compile_options(test_ip_address PRIVATE 
   -Wall -Wextra -pedantic -Werror 
  )
 endif()
@@ -84,4 +96,4 @@ include(CPack)
 
 # Настройка тестов
 enable_testing()
-add_test(test_ip_address test_ip_address)
+add_test(test_lab2 test_ip_address) 
