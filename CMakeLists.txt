@@ -1,40 +1,82 @@
 cmake_minimum_required(VERSION 3.10)
-  project(lab2 VERSION 0.1.0 LANGUAGES CXX)
 
-  # Укажите путь к Google Test
-  set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};C:/path/to/gtest/installation" CACHE STRING "Path to Google Test installation")
+set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
+set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
-  # Найдите и включите Google Test
-  include(FindGTest)
-  if(gtest_FOUND)
-    message(STATUS "Found GTest: ${gtest_INCLUDE_DIRS}")
-    add_subdirectory(test)
-  else()
-  endif()
+project(helloworld VERSION ${PROJECT_VESRION})
 
-# Main executable
-add_executable(lab2 main.cpp)
-target_link_libraries(lab2 googletest) 
+# Find and include Google Test
+include(FindGTest)
+if(gtest_FOUND)
+  message(STATUS "Found GTest: ${gtest_INCLUDE_DIRS}")
+else()
+  message(FATAL_ERROR "Google Test not found. Please install it.")
+endif()
 
-# Build configuration
-set(CMAKE_BUILD_TYPE Release) 
-set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/install") 
+configure_file(version.h.in version.h)
 
-# Custom target for packaging (optional)
-add_custom_target(create_package
-  COMMAND ${CMAKE_COMMAND} -E copy_directory bin "${CMAKE_INSTALL_PREFIX}/bin"
-  COMMAND ${CMAKE_COMMAND} -E copy_directory include "${CMAKE_INSTALL_PREFIX}/include"
-  COMMAND ${CMAKE_COMMAND} -E copy_directory lib "${CMAKE_INSTALL_PREFIX}/lib"
-  COMMAND ${CMAKE_COMMAND} -E copy_directory share "${CMAKE_INSTALL_PREFIX}/share"
-  COMMAND ${CMAKE_COMMAND} -E tar czf "${PROJECT_NAME}-${CMAKE_BUILD_TYPE}.tar.gz" "${CMAKE_INSTALL_PREFIX}"
-  COMMAND ${CMAKE_COMMAND} -E remove_directory "${CMAKE_INSTALL_PREFIX}"
+# Add executables
+add_executable(helloworld_cli main.cpp)
+add_library(helloworld lib.cpp)
+add_executable(test_version test_version.cpp)
+
+# Set common target properties
+set_target_properties(helloworld_cli helloworld test_version PROPERTIES
+  CXX_STANDARD 14
+  CXX_STANDARD_REQUIRED ON
 )
 
-# Test configuration (already good)
-include(CTest) 
-enable_testing() 
+# Include directories
+target_include_directories(helloworld
+  PRIVATE "${CMAKE_BINARY_DIR}"
+)
 
-# CPack configuration (already good)
-set(CPACK_PROJECT_NAME ${PROJECT_NAME}) 
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION}) 
+# Link to Google Test
+target_link_libraries(test_version
+  gtest::gtest googletest::gtest_main 
+  helloworld
+)
+
+# Link helloworld_cli 
+target_link_libraries(helloworld_cli PRIVATE 
+  helloworld
+)
+
+# Compiler flags
+if (MSVC)
+  target_compile_options(helloworld_cli PRIVATE
+    /W4 
+  )
+  target_compile_options(helloworld PRIVATE 
+    /W4 
+  )
+  target_compile_options(test_version PRIVATE 
+    /W4 
+  )
+else ()
+  target_compile_options(helloworld_cli PRIVATE 
+    -Wall -Wextra -pedantic -Werror 
+  )
+  target_compile_options(helloworld PRIVATE 
+    -Wall -Wextra -pedantic -Werror 
+  )
+  target_compile_options(test_version PRIVATE 
+    -Wall -Wextra -pedantic -Werror 
+  )
+endif()
+
+# Install
+install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
+
+# CPack
+# Установка пакета DEB для Linux
+if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
+  set(CPACK_GENERATOR DEB) 
+endif()
+
+# Установка пакета ZIP для macOS
+if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
+  set(CPACK_GENERATOR ZIP)
+endif()
+
 include(CPack)
