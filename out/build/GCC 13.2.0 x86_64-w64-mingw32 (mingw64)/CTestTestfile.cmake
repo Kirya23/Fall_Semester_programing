@@ -5,4 +5,4 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 add_test(test_lab2 "test_lab2")
-set_tests_properties(test_lab2 PROPERTIES  _BACKTRACE_TRIPLES "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/CMakeLists.txt;88;add_test;C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/CMakeLists.txt;0;")
+set_tests_properties(test_lab2 PROPERTIES  _BACKTRACE_TRIPLES "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/CMakeLists.txt;87;add_test;C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/CMakeLists.txt;0;")

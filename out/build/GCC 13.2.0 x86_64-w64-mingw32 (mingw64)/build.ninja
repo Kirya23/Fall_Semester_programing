@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: lab2
-# Configurations: Release
+# Configurations: Debug
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Release
+CONFIGURATION = Debug
 # =============================================================================
 # Include auxiliary files.
 
@@ -41,7 +41,7 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC$ 13.2.0$ x86_64-w64-mingw32$ (mingw64)/
 # =============================================================================
-# Object build statements for EXECUTABLE target lab2
+# Object build statements for STATIC_LIBRARY target lab2
 
 
 #############################################
@@ -49,203 +49,61 @@ cmake_ninja_workdir = C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programin
 
 build cmake_object_order_depends_target_lab2: phony || CMakeFiles/lab2.dir
 
-build CMakeFiles/lab2.dir/main.cpp.obj: CXX_COMPILER__lab2_unscanned_Release C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/main.cpp || cmake_object_order_depends_target_lab2
-  DEP_FILE = CMakeFiles\lab2.dir\main.cpp.obj.d
-  FLAGS = -O3 -DNDEBUG
+build CMakeFiles/lab2.dir/test_ip_address.cpp.obj: CXX_COMPILER__lab2_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/test_ip_address.cpp || cmake_object_order_depends_target_lab2
+  DEP_FILE = CMakeFiles\lab2.dir\test_ip_address.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -Wall -Wextra -pedantic -Werror
+  INCLUDES = -I"C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)"
   OBJECT_DIR = CMakeFiles\lab2.dir
   OBJECT_FILE_DIR = CMakeFiles\lab2.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target lab2
+# Link build statements for STATIC_LIBRARY target lab2
 
 
 #############################################
-# Link the executable lab2.exe
+# Link the static library liblab2.a
 
-build lab2.exe: CXX_EXECUTABLE_LINKER__lab2_Release CMakeFiles/lab2.dir/main.cpp.obj
-  FLAGS = -O3 -DNDEBUG
-  LINK_LIBRARIES = -lgoogletest  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+build liblab2.a: CXX_STATIC_LIBRARY_LINKER__lab2_Debug CMakeFiles/lab2.dir/test_ip_address.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles\lab2.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = lab2.exe
-  TARGET_IMPLIB = liblab2.dll.a
-  TARGET_PDB = lab2.exe.dbg
+  TARGET_FILE = liblab2.a
+  TARGET_PDB = lab2.a.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target lab2_cli
 
 
 #############################################
-# Utility command for create_package
+# Order-only phony target for lab2_cli
 
-build create_package: phony CMakeFiles/create_package
+build cmake_object_order_depends_target_lab2_cli: phony || cmake_object_order_depends_target_lab2
+
+build CMakeFiles/lab2_cli.dir/main.cpp.obj: CXX_COMPILER__lab2_cli_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/main.cpp || cmake_object_order_depends_target_lab2_cli
+  DEP_FILE = CMakeFiles\lab2_cli.dir\main.cpp.obj.d
+  FLAGS = -g -Wall -Wextra -pedantic -Werror
+  OBJECT_DIR = CMakeFiles\lab2_cli.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab2_cli.dir
 
 
-#############################################
-# Utility command for Experimental
-
-build Experimental: phony CMakeFiles/Experimental
-
-
-#############################################
-# Utility command for Nightly
-
-build Nightly: phony CMakeFiles/Nightly
+# =============================================================================
+# Link build statements for EXECUTABLE target lab2_cli
 
 
 #############################################
-# Utility command for Continuous
-
-build Continuous: phony CMakeFiles/Continuous
-
-
-#############################################
-# Utility command for NightlyMemoryCheck
-
-build NightlyMemoryCheck: phony CMakeFiles/NightlyMemoryCheck
-
-
-#############################################
-# Utility command for NightlyStart
-
-build NightlyStart: phony CMakeFiles/NightlyStart
-
-
-#############################################
-# Utility command for NightlyUpdate
-
-build NightlyUpdate: phony CMakeFiles/NightlyUpdate
-
-
-#############################################
-# Utility command for NightlyConfigure
-
-build NightlyConfigure: phony CMakeFiles/NightlyConfigure
-
-
-#############################################
-# Utility command for NightlyBuild
-
-build NightlyBuild: phony CMakeFiles/NightlyBuild
-
-
-#############################################
-# Utility command for NightlyTest
-
-build NightlyTest: phony CMakeFiles/NightlyTest
-
-
-#############################################
-# Utility command for NightlyCoverage
-
-build NightlyCoverage: phony CMakeFiles/NightlyCoverage
-
-
-#############################################
-# Utility command for NightlyMemCheck
-
-build NightlyMemCheck: phony CMakeFiles/NightlyMemCheck
-
-
-#############################################
-# Utility command for NightlySubmit
-
-build NightlySubmit: phony CMakeFiles/NightlySubmit
-
-
-#############################################
-# Utility command for ExperimentalStart
-
-build ExperimentalStart: phony CMakeFiles/ExperimentalStart
-
-
-#############################################
-# Utility command for ExperimentalUpdate
-
-build ExperimentalUpdate: phony CMakeFiles/ExperimentalUpdate
-
-
-#############################################
-# Utility command for ExperimentalConfigure
-
-build ExperimentalConfigure: phony CMakeFiles/ExperimentalConfigure
-
-
-#############################################
-# Utility command for ExperimentalBuild
-
-build ExperimentalBuild: phony CMakeFiles/ExperimentalBuild
-
-
-#############################################
-# Utility command for ExperimentalTest
-
-build ExperimentalTest: phony CMakeFiles/ExperimentalTest
-
-
-#############################################
-# Utility command for ExperimentalCoverage
-
-build ExperimentalCoverage: phony CMakeFiles/ExperimentalCoverage
-
-
-#############################################
-# Utility command for ExperimentalMemCheck
-
-build ExperimentalMemCheck: phony CMakeFiles/ExperimentalMemCheck
-
-
-#############################################
-# Utility command for ExperimentalSubmit
-
-build ExperimentalSubmit: phony CMakeFiles/ExperimentalSubmit
-
-
-#############################################
-# Utility command for ContinuousStart
-
-build ContinuousStart: phony CMakeFiles/ContinuousStart
-
-
-#############################################
-# Utility command for ContinuousUpdate
-
-build ContinuousUpdate: phony CMakeFiles/ContinuousUpdate
-
-
-#############################################
-# Utility command for ContinuousConfigure
-
-build ContinuousConfigure: phony CMakeFiles/ContinuousConfigure
-
-
-#############################################
-# Utility command for ContinuousBuild
-
-build ContinuousBuild: phony CMakeFiles/ContinuousBuild
-
-
-#############################################
-# Utility command for ContinuousTest
-
-build ContinuousTest: phony CMakeFiles/ContinuousTest
-
-
-#############################################
-# Utility command for ContinuousCoverage
-
-build ContinuousCoverage: phony CMakeFiles/ContinuousCoverage
-
-
-#############################################
-# Utility command for ContinuousMemCheck
-
-build ContinuousMemCheck: phony CMakeFiles/ContinuousMemCheck
-
-
-#############################################
-# Utility command for ContinuousSubmit
-
-build ContinuousSubmit: phony CMakeFiles/ContinuousSubmit
+# Link the executable lab2_cli.exe
+
+build lab2_cli.exe: CXX_EXECUTABLE_LINKER__lab2_cli_Debug CMakeFiles/lab2_cli.dir/main.cpp.obj | liblab2.a || liblab2.a
+  FLAGS = -g
+  LINK_LIBRARIES = liblab2.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\lab2_cli.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lab2_cli.exe
+  TARGET_IMPLIB = liblab2_cli.dll.a
+  TARGET_PDB = lab2_cli.exe.dbg
 
 
 #############################################
@@ -308,239 +166,52 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 
 #############################################
-# Custom command for CMakeFiles\create_package
+# Utility command for list_install_components
 
-build CMakeFiles/create_package | ${cmake_ninja_workdir}CMakeFiles/create_package: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\cmake.exe -E copy_directory bin "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/install/bin" && C:\msys64\mingw64\bin\cmake.exe -E copy_directory include "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/install/include" && C:\msys64\mingw64\bin\cmake.exe -E copy_directory lib "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/install/lib" && C:\msys64\mingw64\bin\cmake.exe -E copy_directory share "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/install/share" && C:\msys64\mingw64\bin\cmake.exe -E tar czf lab2-Release.tar.gz "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/install" && C:\msys64\mingw64\bin\cmake.exe -E remove_directory "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/install""
-
-
-#############################################
-# Custom command for CMakeFiles\Experimental
-
-build CMakeFiles/Experimental | ${cmake_ninja_workdir}CMakeFiles/Experimental: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D Experimental"
-  pool = console
+build list_install_components: phony
 
 
 #############################################
-# Custom command for CMakeFiles\Nightly
+# Utility command for install
 
-build CMakeFiles/Nightly | ${cmake_ninja_workdir}CMakeFiles/Nightly: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D Nightly"
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
   pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
 
 
 #############################################
-# Custom command for CMakeFiles\Continuous
+# Utility command for install/local
 
-build CMakeFiles/Continuous | ${cmake_ninja_workdir}CMakeFiles/Continuous: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D Continuous"
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
   pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
 
 
 #############################################
-# Custom command for CMakeFiles\NightlyMemoryCheck
+# Utility command for install/strip
 
-build CMakeFiles/NightlyMemoryCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMemoryCheck: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D NightlyMemoryCheck"
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
   pool = console
+  restat = 1
 
-
-#############################################
-# Custom command for CMakeFiles\NightlyStart
-
-build CMakeFiles/NightlyStart | ${cmake_ninja_workdir}CMakeFiles/NightlyStart: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D NightlyStart"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\NightlyUpdate
-
-build CMakeFiles/NightlyUpdate | ${cmake_ninja_workdir}CMakeFiles/NightlyUpdate: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D NightlyUpdate"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\NightlyConfigure
-
-build CMakeFiles/NightlyConfigure | ${cmake_ninja_workdir}CMakeFiles/NightlyConfigure: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D NightlyConfigure"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\NightlyBuild
-
-build CMakeFiles/NightlyBuild | ${cmake_ninja_workdir}CMakeFiles/NightlyBuild: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D NightlyBuild"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\NightlyTest
-
-build CMakeFiles/NightlyTest | ${cmake_ninja_workdir}CMakeFiles/NightlyTest: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D NightlyTest"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\NightlyCoverage
-
-build CMakeFiles/NightlyCoverage | ${cmake_ninja_workdir}CMakeFiles/NightlyCoverage: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D NightlyCoverage"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\NightlyMemCheck
-
-build CMakeFiles/NightlyMemCheck | ${cmake_ninja_workdir}CMakeFiles/NightlyMemCheck: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D NightlyMemCheck"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\NightlySubmit
-
-build CMakeFiles/NightlySubmit | ${cmake_ninja_workdir}CMakeFiles/NightlySubmit: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D NightlySubmit"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ExperimentalStart
-
-build CMakeFiles/ExperimentalStart | ${cmake_ninja_workdir}CMakeFiles/ExperimentalStart: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ExperimentalStart"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ExperimentalUpdate
-
-build CMakeFiles/ExperimentalUpdate | ${cmake_ninja_workdir}CMakeFiles/ExperimentalUpdate: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ExperimentalUpdate"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ExperimentalConfigure
-
-build CMakeFiles/ExperimentalConfigure | ${cmake_ninja_workdir}CMakeFiles/ExperimentalConfigure: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ExperimentalConfigure"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ExperimentalBuild
-
-build CMakeFiles/ExperimentalBuild | ${cmake_ninja_workdir}CMakeFiles/ExperimentalBuild: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ExperimentalBuild"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ExperimentalTest
-
-build CMakeFiles/ExperimentalTest | ${cmake_ninja_workdir}CMakeFiles/ExperimentalTest: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ExperimentalTest"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ExperimentalCoverage
-
-build CMakeFiles/ExperimentalCoverage | ${cmake_ninja_workdir}CMakeFiles/ExperimentalCoverage: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ExperimentalCoverage"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ExperimentalMemCheck
-
-build CMakeFiles/ExperimentalMemCheck | ${cmake_ninja_workdir}CMakeFiles/ExperimentalMemCheck: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ExperimentalMemCheck"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ExperimentalSubmit
-
-build CMakeFiles/ExperimentalSubmit | ${cmake_ninja_workdir}CMakeFiles/ExperimentalSubmit: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ExperimentalSubmit"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ContinuousStart
-
-build CMakeFiles/ContinuousStart | ${cmake_ninja_workdir}CMakeFiles/ContinuousStart: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ContinuousStart"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ContinuousUpdate
-
-build CMakeFiles/ContinuousUpdate | ${cmake_ninja_workdir}CMakeFiles/ContinuousUpdate: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ContinuousUpdate"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ContinuousConfigure
-
-build CMakeFiles/ContinuousConfigure | ${cmake_ninja_workdir}CMakeFiles/ContinuousConfigure: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ContinuousConfigure"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ContinuousBuild
-
-build CMakeFiles/ContinuousBuild | ${cmake_ninja_workdir}CMakeFiles/ContinuousBuild: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ContinuousBuild"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ContinuousTest
-
-build CMakeFiles/ContinuousTest | ${cmake_ninja_workdir}CMakeFiles/ContinuousTest: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ContinuousTest"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ContinuousCoverage
-
-build CMakeFiles/ContinuousCoverage | ${cmake_ninja_workdir}CMakeFiles/ContinuousCoverage: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ContinuousCoverage"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ContinuousMemCheck
-
-build CMakeFiles/ContinuousMemCheck | ${cmake_ninja_workdir}CMakeFiles/ContinuousMemCheck: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ContinuousMemCheck"
-  pool = console
-
-
-#############################################
-# Custom command for CMakeFiles\ContinuousSubmit
-
-build CMakeFiles/ContinuousSubmit | ${cmake_ninja_workdir}CMakeFiles/ContinuousSubmit: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D "C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && C:\msys64\mingw64\bin\ctest.exe -D ContinuousSubmit"
-  pool = console
+build install/strip: phony CMakeFiles/install/strip.util
 
 # =============================================================================
 # Target aliases.
 
-build lab2: phony lab2.exe
+build lab2: phony liblab2.a
+
+build lab2_cli: phony lab2_cli.exe
 
 # =============================================================================
 # Folder targets.
@@ -550,7 +221,7 @@ build lab2: phony lab2.exe
 #############################################
 # Folder: C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)
 
-build all: phony lab2.exe
+build all: phony liblab2.a lab2_cli.exe
 
 # =============================================================================
 # Built-in targets
@@ -559,14 +230,14 @@ build all: phony lab2.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/CMakeLists.txt C$:/msys64/mingw64/lib/cmake/GTest/GTestConfig.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestConfigVersion.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestTargets-release.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestTargets.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeCXXInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeFindDependencyMacro.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/mingw64/share/cmake/Modules/CPack.cmake C$:/msys64/mingw64/share/cmake/Modules/CPackComponent.cmake C$:/msys64/mingw64/share/cmake/Modules/CTest.cmake C$:/msys64/mingw64/share/cmake/Modules/CTestTargets.cmake C$:/msys64/mingw64/share/cmake/Modules/CTestUseLaunchers.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/GNU-CXX.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/mingw64/share/cmake/Modules/DartConfiguration.tcl.in C$:/msys64/mingw64/share/cmake/Modules/FindGTest.cmake C$:/msys64/mingw64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake C$:/msys64/mingw64/share/cmake/Modules/FindPackageMessage.cmake C$:/msys64/mingw64/share/cmake/Modules/GoogleTest.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/WindowsPaths.cmake C$:/msys64/mingw64/share/cmake/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/CMakeLists.txt C$:/msys64/mingw64/lib/cmake/GTest/GTestConfig.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestConfigVersion.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestTargets-release.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestTargets.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeCInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeCXXInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeFindDependencyMacro.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/mingw64/share/cmake/Modules/CPack.cmake C$:/msys64/mingw64/share/cmake/Modules/CPackComponent.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/GNU-C.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/GNU-CXX.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/mingw64/share/cmake/Modules/FindGTest.cmake C$:/msys64/mingw64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake C$:/msys64/mingw64/share/cmake/Modules/FindPackageMessage.cmake C$:/msys64/mingw64/share/cmake/Modules/GoogleTest.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-C.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/WindowsPaths.cmake C$:/msys64/mingw64/share/cmake/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/CMakeLists.txt C$:/msys64/mingw64/lib/cmake/GTest/GTestConfig.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestConfigVersion.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestTargets-release.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestTargets.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeCXXInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeFindDependencyMacro.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/mingw64/share/cmake/Modules/CPack.cmake C$:/msys64/mingw64/share/cmake/Modules/CPackComponent.cmake C$:/msys64/mingw64/share/cmake/Modules/CTest.cmake C$:/msys64/mingw64/share/cmake/Modules/CTestTargets.cmake C$:/msys64/mingw64/share/cmake/Modules/CTestUseLaunchers.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/GNU-CXX.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/mingw64/share/cmake/Modules/DartConfiguration.tcl.in C$:/msys64/mingw64/share/cmake/Modules/FindGTest.cmake C$:/msys64/mingw64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake C$:/msys64/mingw64/share/cmake/Modules/FindPackageMessage.cmake C$:/msys64/mingw64/share/cmake/Modules/GoogleTest.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/WindowsPaths.cmake C$:/msys64/mingw64/share/cmake/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/CMakeLists.txt C$:/msys64/mingw64/lib/cmake/GTest/GTestConfig.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestConfigVersion.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestTargets-release.cmake C$:/msys64/mingw64/lib/cmake/GTest/GTestTargets.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeCInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeCXXInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeCommonLanguageInclude.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeFindDependencyMacro.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeGenericSystem.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeInitializeConfigs.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeLanguageInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeRCInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake C$:/msys64/mingw64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake C$:/msys64/mingw64/share/cmake/Modules/CPack.cmake C$:/msys64/mingw64/share/cmake/Modules/CPackComponent.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/GNU-C.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/GNU-CXX.cmake C$:/msys64/mingw64/share/cmake/Modules/Compiler/GNU.cmake C$:/msys64/mingw64/share/cmake/Modules/FindGTest.cmake C$:/msys64/mingw64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake C$:/msys64/mingw64/share/cmake/Modules/FindPackageMessage.cmake C$:/msys64/mingw64/share/cmake/Modules/GoogleTest.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-C.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU-CXX.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-GNU.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-Initialize.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows-windres.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/Windows.cmake C$:/msys64/mingw64/share/cmake/Modules/Platform/WindowsPaths.cmake C$:/msys64/mingw64/share/cmake/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################
