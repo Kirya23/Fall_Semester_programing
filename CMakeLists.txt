@@ -23,6 +23,8 @@ add_executable(lab2_cli main.cpp)
 # Добавляем тестовый исполняемый файл
 add_executable(test_ip_address test_ip_address.cpp)
 
+target_link_libraries(test_ip_address gtest gtest_main)
+   
 # Устанавливаем общие свойства для lab2
 set_target_properties(lab2 PROPERTIES 
  CXX_STANDARD 14 
