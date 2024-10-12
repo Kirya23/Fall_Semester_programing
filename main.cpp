@@ -31,54 +31,54 @@ auto compareIP = [](const IPAddress& lhs, const IPAddress& rhs) {
     return tie(lhs.n1, lhs.n2, lhs.n3, lhs.n4) > tie(rhs.n1, rhs.n2, rhs.n3, rhs.n4);
 };
 
-// int main() {
-//     vector<IPAddress> ipAddresses;
+int main() {
+    vector<IPAddress> ipAddresses;
 
-//     // Чтение IP-адресов из файла
-//     ifstream file("ip_filter.tsv");
-//     if (!file.is_open()) {
-//         cerr << "Ошибка открытия файла ip_filter.tsv" << endl;
-//         return 1;
-//     }
+    // Чтение IP-адресов из файла
+    ifstream file("ip_filter.tsv");
+    if (!file.is_open()) {
+        cerr << "Ошибка открытия файла ip_filter.tsv" << endl;
+        return 1;
+    }
 
-//     string line;
-//     while (getline(file, line)) {
-//         stringstream ss(line);
-//         string ipString;
-//         getline(ss, ipString, '\t'); // Чтение только первого поля
-//         ipAddresses.push_back(ipString);
-//     }
+    string line;
+    while (getline(file, line)) {
+        stringstream ss(line);
+        string ipString;
+        getline(ss, ipString, '\t'); // Чтение только первого поля
+        ipAddresses.push_back(ipString);
+    }
    
-//     file.close();
+    file.close();
 
-//     // Сортировка в обратном лексикографическом порядке
-//     sort(ipAddresses.begin(), ipAddresses.end(), compareIP);
+    // Сортировка в обратном лексикографическом порядке
+    sort(ipAddresses.begin(), ipAddresses.end(), compareIP);
 
-//     cout<< "Вывод всех IP-адресов"<< endl;
-//     for (const auto& ip : ipAddresses) {
-//         cout << ip.toString() << endl;
-//     }
+    cout<< "Вывод всех IP-адресов"<< endl;
+    for (const auto& ip : ipAddresses) {
+        cout << ip.toString() << endl;
+    }
 
-//     cout<< "Вывод IP-адресов с первым байтом 1"<< endl;
-//     for (const auto& ip : ipAddresses) {
-//         if (ip.n1 == 1) {
-//             cout << ip.toString() << endl;
-//         }
-//     }
+    cout<< "Вывод IP-адресов с первым байтом 1"<< endl;
+    for (const auto& ip : ipAddresses) {
+        if (ip.n1 == 1) {
+            cout << ip.toString() << endl;
+        }
+    }
 
-//     cout<<" Вывод IP-адресов с первым байтом 46 и вторым байтом 70"<< endl;
-//     for (const auto& ip : ipAddresses) {
-//         if (ip.n1 == 46 && ip.n2 == 70) {
-//             cout << ip.toString() << endl;
-//         }
-//     }
+    cout<<" Вывод IP-адресов с первым байтом 46 и вторым байтом 70"<< endl;
+    for (const auto& ip : ipAddresses) {
+        if (ip.n1 == 46 && ip.n2 == 70) {
+            cout << ip.toString() << endl;
+        }
+    }
 
-//    cout<< "Вывод IP-адресов с любым байтом 46"<< endl;
-//     for (const auto& ip : ipAddresses) {
-//         if (ip.n1 == 46 || ip.n2 == 46 || ip.n3 == 46 || ip.n4 == 46) {
-//             cout << ip.toString() << endl;
-//         }
-//     }
+   cout<< "Вывод IP-адресов с любым байтом 46"<< endl;
+    for (const auto& ip : ipAddresses) {
+        if (ip.n1 == 46 || ip.n2 == 46 || ip.n3 == 46 || ip.n4 == 46) {
+            cout << ip.toString() << endl;
+        }
+    }
 
-//     return 0;
-// }
+    return 0;
+}
