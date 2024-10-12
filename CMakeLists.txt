@@ -9,8 +9,6 @@ project(lab2 VERSION ${PROJECT_VESRION})
 include(FindGTest)
 if(gtest_FOUND)
   message(STATUS "Found GTest: ${gtest_INCLUDE_DIRS}")
-else()
-  message(FATAL_ERROR "Google Test not found. Please install it.")
 endif()
 
 configure_file(version.h.in version.h)

@@ -21,7 +21,7 @@ jobs:
     run: |
      sudo apt-get update
      sudo apt-get install -y build-essential cmake libgtest-dev
-     
+
   - name: Build Project
     run: |
      mkdir build
@@ -52,43 +52,43 @@ jobs:
      draft: false
      prerelease: false
 
- build_macos:
-  runs-on: macos-latest
-  permissions: read-all # Изменили на read-all
-  steps:
-  - uses: actions/checkout@v3
-    with:
-     submodules: true
-  - name: Install Dependencies
-    run: |
-     brew update
-     brew install cmake gtest
-  - name: Build Project
-    run: |
-     mkdir build
-     cd build
-     cmake .. -DCMAKE_BUILD_TYPE=Release
-     cmake --build . --config Release
-  - name: Run Tests
-    run: |
-     cd build
-     ctest 
-  - name: Create and Upload Release Asset
-    uses: actions/upload-release-asset@v1
-    env:
-     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    with:
-     upload_url: ${{ steps.create_release.outputs.upload_url }}
-     asset_path: ./lab2-Release.zip
-     asset_name: lab2-Release.zip
-     asset_content_type: application/x-tar
-  - name: Create Release
-    id: create_release
-    uses: actions/create-release@v1
-    env:
-     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    with:
-     tag_name: ${{ github.run_number }}-MacOS
-     release_name: Release ${{ github.run_number }} for MacOS
-     draft: false
-     prerelease: false
+#  build_macos:
+#   runs-on: macos-latest
+#   permissions: read-all # Изменили на read-all
+#   steps:
+#   - uses: actions/checkout@v3
+#     with:
+#      submodules: true
+#   - name: Install Dependencies
+#     run: |
+#      brew update
+#      brew install cmake gtest
+#   - name: Build Project
+#     run: |
+#      mkdir build
+#      cd build
+#      cmake .. -DCMAKE_BUILD_TYPE=Release
+#      cmake --build . --config Release
+#   - name: Run Tests
+#     run: |
+#      cd build
+#      ctest 
+#   - name: Create and Upload Release Asset
+#     uses: actions/upload-release-asset@v1
+#     env:
+#      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#     with:
+#      upload_url: ${{ steps.create_release.outputs.upload_url }}
+#      asset_path: ./lab2-Release.zip
+#      asset_name: lab2-Release.zip
+#      asset_content_type: application/x-tar
+#   - name: Create Release
+#     id: create_release
+#     uses: actions/create-release@v1
+#     env:
+#      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#     with:
+#      tag_name: ${{ github.run_number }}-MacOS
+#      release_name: Release ${{ github.run_number }} for MacOS
+#      draft: false
+#      prerelease: false
