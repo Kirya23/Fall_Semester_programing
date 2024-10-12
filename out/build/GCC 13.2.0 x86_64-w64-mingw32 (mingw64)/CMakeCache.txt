@@ -17,6 +17,14 @@
 //Build the testing tree.
 BUILD_TESTING:BOOL=ON
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=C:/msys64/mingw64/lib/cmake/Boost-1.84.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=C:/msys64/mingw64/include
+
+Boost_UNIT_TEST_FRAMEWORK_LIBRARY_RELEASE:STRING=C:/msys64/mingw64/lib/libboost_unit_test_framework-mt.dll
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/msys64/mingw64/bin/addr2line.exe
 
@@ -321,6 +329,12 @@ MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 //Name of the computer/site where compile is being run
 SITE:STRING=DESKTOP-6VPG3VO
 
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=C:/msys64/mingw64/lib/cmake/boost_headers-1.84.0
+
+//The directory containing a CMake configuration file for boost_unit_test_framework.
+boost_unit_test_framework_DIR:PATH=C:/msys64/mingw64/lib/cmake/boost_unit_test_framework-1.84.0
+
 //Value Computed by CMake
 helloworld_BINARY_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)
 
@@ -344,6 +358,8 @@ lab2_SOURCE_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programin
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -528,6 +544,8 @@ CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[C:/msys64/mingw64/lib/cmake/Boost-1.84.0/BoostConfig.cmake][cfound components: unit_test_framework ][v1.84.0()]
 //Details about finding GTest
 FIND_PACKAGE_MESSAGE_DETAILS_GTest:INTERNAL=[C:/msys64/mingw64/lib/cmake/GTest/GTestConfig.cmake][c ][v1.14.0()]
 //ADVANCED property for variable: GITCOMMAND
@@ -544,4 +562,8 @@ PATCH_VERSION:INTERNAL=1
 SITE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_unit_test_framework_DIR
+boost_unit_test_framework_DIR-ADVANCED:INTERNAL=1
 
