@@ -66,7 +66,7 @@ TEST(IPFilteringTest, FilterAnyByte) {
     ASSERT_NE(find(filteredAddresses.begin(), filteredAddresses.end(), "1.2.3.46"), filteredAddresses.end());
 }
 
-// int main(int argc, char **argv) {
-//     ::testing::InitGoogleTest(&argc, argv);
-//     return RUN_ALL_TESTS();
-// }
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
