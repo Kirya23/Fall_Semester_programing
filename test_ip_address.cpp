@@ -15,7 +15,7 @@ vector<IPAddress> createTestIPAddresses() {
     return testAddresses;
 }
 
-TEST(IPFilteringTest, SortInReverseLexicographicalOrder) {
+TEST(IPFiltering, Sort) {
     vector<IPAddress> ipAddresses = createTestIPAddresses();
     sort(ipAddresses.begin(), ipAddresses.end(), compareIP);
 
