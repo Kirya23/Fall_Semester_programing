@@ -1,7 +1,12 @@
 #include "gtest/gtest.h"
 #include "main.cpp"
+#include <iostream>
+#include <vector>
+#include <algorithm>
 #include <sstream>
 #include <fstream>
+#include <tuple>
+#include <cstdint>
 
 // Тестовый набор IP-адресов для проверки
 vector<IPAddress> createTestIPAddresses() {
