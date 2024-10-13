@@ -7,7 +7,7 @@ project(lab2 VERSION ${PROJECT_VESRION})
 
 # Находим Google Test
 find_package(GTest REQUIRED)
-
+include_directories(${GTest_INCLUDE_DIR})
 # Включаем FindGTest
 include(FindGTest) 
 if(gtest_FOUND) 
