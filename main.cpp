@@ -35,21 +35,21 @@ int main() {
     vector<IPAddress> ipAddresses;
 
     // Чтение IP-адресов из файла
-    // ifstream file("ip_filter.tsv");
-    // if (!file.is_open()) {
-    //     cerr << "Ошибка открытия файла ip_filter.tsv" << endl;
-    //     return 1;
-    // }
+    ifstream file("C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/ip_filter.tsv");
+    if (!file.is_open()) {
+        cerr << "Ошибка открытия файла ip_filter.tsv" << endl;
+        return 1;
+    }
 
-    // string line;
-    // while (getline(file, line)) {
-    //     stringstream ss(line);
-    //     string ipString;
-    //     getline(ss, ipString, '\t'); // Чтение только первого поля
-    //     ipAddresses.push_back(ipString);
-    // }
+    string line;
+    while (getline(file, line)) {
+        stringstream ss(line);
+        string ipString;
+        getline(ss, ipString, '\t'); // Чтение только первого поля
+        ipAddresses.push_back(ipString);
+    }
    
-    // file.close();
+    file.close();
 
     // Сортировка в обратном лексикографическом порядке
     sort(ipAddresses.begin(), ipAddresses.end(), compareIP);
