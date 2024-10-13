@@ -18,17 +18,45 @@
 	ProcessorCacheSize="0"
 	NumberOfLogicalCPU="16"
 	NumberOfPhysicalCPU="12"
-	TotalVirtualMemory="18011"
+	TotalVirtualMemory="18380"
 	TotalPhysicalMemory="16104"
 	LogicalProcessorsPerPhysical="1"
 	ProcessorClockFrequency="3110"
 	>
 	<Testing>
-		<StartDateTime>Oct 13 21:51 RTZ 6 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</StartDateTime>
-		<StartTestTime>1728831092</StartTestTime>
-		<TestList/>
-		<EndDateTime>Oct 13 21:51 RTZ 6 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</EndDateTime>
-		<EndTestTime>1728831092</EndTestTime>
+		<StartDateTime>Oct 14 00:03 RTZ 6 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</StartDateTime>
+		<StartTestTime>1728839036</StartTestTime>
+		<TestList>
+			<Test>./test_lab2</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>test_lab2</Name>
+			<Path>.</Path>
+			<FullName>./test_lab2</FullName>
+			<FullCommandLine>"C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)\test_ip_address.exe"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0574482</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>"C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)\test_ip_address.exe"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyLtoWDWIWg0ry8zLx0BSOFktTikmKFtKL8XAVDMEehuDSzJFWPK1oXDmIV3HPykxJzIPKpeWWZRfl5ual5QLWpJbqlBWiKUQwNATK5ohWCQv0UwCAWLKJnCBSDAH9vuJiChoFCbrEmFuVGWJQbwZXjtRyiSqEkvyQxR5OLOG+VpCYW6abkl+dxRSOHGs7QUihKzNNDtQjo3gDH4GBXF5AfoBr1uACXw29p====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Oct 14 00:03 RTZ 6 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</EndDateTime>
+		<EndTestTime>1728839036</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>
