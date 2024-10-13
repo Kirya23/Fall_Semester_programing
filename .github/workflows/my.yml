@@ -69,26 +69,29 @@ jobs:
           asset_content_type: application/vnd.debian.binary-package
 
   build_macos:
+    # Запускаем job на macos-latest
     runs-on: macos-latest
+    # Предоставляем разрешения на запись во все ресурсы
     permissions: write-all
     steps:
+      # Клонируем репозиторий, включая submodules
       - uses: actions/checkout@v3
         with:
           submodules: true
-  # Устанавливаем gtest с помощью Homebrew
-      - run: |
-          brew tap homebrew/core
-          brew install googletest
-      - run: brew --prefix googletest
-  # Конфигурируем проект с помощью CMake, используя номер запуска для PATCH_VERSION 
-      - run: cmake . -DPATCH_VERSION=${{ github.run_number }}  -Dgtest_DIR=$(brew --prefix googletest)
-  # Строим проект с помощью CMake
+      # Устанавливаем boost с помощью Homebrew
+      - run: brew install boost
+      # Конфигурируем проект с помощью CMake, используя номер запуска для PATCH_VERSION
+      - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
+      # Строим проект с помощью CMake
       - run: cmake --build .
-  # Запускаем тесты
-      - run: cmake --build . --target test
-  # Создаем пакет
+      # Запускаем тесты
+      - name: Run Tests
+        run: |
+          ctest --output-on-failure || exit 1  # Проверяем наличие тестов и их успешное выполнение
+      
+      # Создаем пакет
       - run: cmake --build . --target package
-  # Создаем релиз для MacOS
+      # Создаем релиз для MacOS
       - name: Create Release (MacOS)
         id: create_release_macos
         uses: actions/create-release@v1
