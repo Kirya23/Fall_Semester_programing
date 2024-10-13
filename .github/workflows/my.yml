@@ -31,10 +31,7 @@ jobs:
             cd build
             ctest -V # Добавлен -V для verbose output
         # Проверьте опции и настройки в CMakeLists.txt
-      - run: cmake --build . --config Release
-        # Проверьте, что команда сборки корректна
-      - run: cmake --build . --target package --config Release
-        # Проверьте, что команда упаковки корректна
+      
       - name: Upload Release Asset
         uses: actions/upload-artifact@v3
         with:
