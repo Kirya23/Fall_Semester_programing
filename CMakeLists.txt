@@ -20,6 +20,7 @@ add_library(lab2 test_ip_address.cpp)
 # Добавляем исполняемый файл lab2_cli
 add_executable(lab2_cli main.cpp)
 
+include_directories(${gtest_INCLUDE_DIR})
 # Добавляем тестовый исполняемый файл
 add_executable(test_ip_address test_ip_address.cpp)
 

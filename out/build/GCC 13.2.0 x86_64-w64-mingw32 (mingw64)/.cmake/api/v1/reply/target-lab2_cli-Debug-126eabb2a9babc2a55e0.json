@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "test_ip_address.exe"
+			"path" : "lab2_cli.exe"
 		},
 		{
-			"path" : "test_ip_address.pdb"
+			"path" : "lab2_cli.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -14,6 +14,7 @@
 		"commands" : 
 		[
 			"add_executable",
+			"install",
 			"target_link_libraries",
 			"target_compile_options"
 		],
@@ -29,19 +30,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 24,
+				"line" : 21,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 26,
+				"line" : 73,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 66,
+				"line" : 41,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 60,
 				"parent" : 0
 			}
 		]
@@ -55,19 +62,19 @@
 					"fragment" : "-g"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"fragment" : "-Wall"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"fragment" : "-Wextra"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"fragment" : "-pedantic"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"fragment" : "-Werror"
 				}
 			],
@@ -78,7 +85,28 @@
 			]
 		}
 	],
-	"id" : "test_ip_address::@6890427a1f51a3e7e1df",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "lab2::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "lab2_cli::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "bin"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/install/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)"
+		}
+	},
 	"link" : 
 	{
 		"commandFragments" : 
@@ -92,13 +120,8 @@
 				"role" : "flags"
 			},
 			{
-				"backtrace" : 2,
-				"fragment" : "-lgtest",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "-lgtest_main",
+				"backtrace" : 3,
+				"fragment" : "liblab2.a",
 				"role" : "libraries"
 			},
 			{
@@ -108,8 +131,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "test_ip_address",
-	"nameOnDisk" : "test_ip_address.exe",
+	"name" : "lab2_cli",
+	"nameOnDisk" : "lab2_cli.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -130,7 +153,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "test_ip_address.cpp",
+			"path" : "main.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
