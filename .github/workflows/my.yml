@@ -81,7 +81,7 @@ jobs:
           brew install googletest
       - run: brew --prefix googletest
   # Конфигурируем проект с помощью CMake, используя номер запуска для PATCH_VERSION 
-      - run: cmake . -DPATCH_VERSION=${{ github.run_number }}  -Dgtest_DIR=$(brew --prefix googletest)
+      - run: cmake . -DPATCH_VERSION=${{ github.run_number }}  -Dgtest_DIR=$(brew --prefix /opt/homebrew/opt/googletest)
   # Строим проект с помощью CMake
       - run: cmake --build .
   # Запускаем тесты
