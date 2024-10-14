@@ -68,43 +68,49 @@ jobs:
           asset_name: lab2-0.0.${{ github.run_number }}-Linux.deb
           asset_content_type: application/vnd.debian.binary-package
 
-  build_macos:
-    runs-on: macos-latest
+  build_windows:
+    runs-on: windows-latest
     permissions: write-all
     steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
-  # Устанавливаем gtest с помощью Homebrew
-      - run: |
-          brew install googletest
-  # Конфигурируем проект с помощью CMake, используя номер запуска для PATCH_VERSION 
-      - run: cmake . -DPATCH_VERSION=${{ github.run_number }}  
+  # Устанавливаем gtest с помощью vcpkg
+      - name: Checkout code
+        uses: vcpkg-action@v1
+        with:
+          package: googletest
+  # Конфигурируем проект с помощью CMake, используя номер запуска для PATCH_VERSION
+      - name: Configure CMake
+        run: cmake . -DPATCH_VERSION=${{ github.run_number }} -Dgtest_DIR=$(vcpkg_root)\installed\x64-windows\include -Dgtest_MAIN_DIR=$(vcpkg_root)\installed\x64-windows\include
   # Строим проект с помощью CMake
-      - run: cmake --build .
+      - name: Build Project
+        run: cmake --build .
   # Запускаем тесты
-      - run: cmake --build . --target test
+      - name: Run Tests
+        run: cmake --build . --target test
   # Создаем пакет
-      - run: cmake --build . --target package
-  # Создаем релиз для MacOS
-      - name: Create Release (MacOS)
-        id: create_release_macos
+      - name: Create Package
+        run: cmake --build . --target package
+  # Создаем релиз для Windows
+      - name: Create Release (Windows)
+        id: create_release_windows
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.run_number }} # Используем номер запуска для тега
-          release_name: Release ${{ github.run_number }} (MacOS)
+          release_name: Release ${{ github.run_number }} (Windows)
           draft: false # Не публикуем релиз в черновике
           prerelease: false # Не публикуем как предварительную версию
-  # Загружаем релизный ассет для MacOS
-      - name: Upload Release Asset (MacOS)
-        id: upload-release-asset-macos
+  # Загружаем релизный ассет для Windows
+      - name: Upload Release Asset (Windows)
+        id: upload-release-asset-windows
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release_macos.outputs.upload_url }}
-          asset_path: ./lab2-0.0.${{ github.run_number }}-Darwin.zip
-          asset_name: lab2-0.0.${{ github.run_number }}-Darwin.zip
+          upload_url: ${{ steps.create_release_windows.outputs.upload_url }}
+          asset_path: ./lab2-0.0.${{ github.run_number }}-Windows.zip
+          asset_name: lab2-0.0.${{ github.run_number }}-Windows.zip
           asset_content_type: application/zip
