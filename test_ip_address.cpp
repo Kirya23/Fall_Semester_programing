@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-
+#include "main.cpp"
 using namespace std;
 
 TEST(Test,1){
