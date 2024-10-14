@@ -77,7 +77,7 @@ jobs:
           submodules: true
   # Устанавливаем gtest с помощью vcpkg
       - name: Checkout code
-        uses: vcpkg-action@v6
+        uses: vcpkg/action@v6
         with:
           package: googletest
   # Конфигурируем проект с помощью CMake, используя номер запуска для PATCH_VERSION
