@@ -77,9 +77,10 @@ jobs:
           submodules: true
   # Устанавливаем gtest с помощью Homebrew
       - run: |
+          brew update
           brew install googletest
-          brew install --universal gtest
-          
+          brew info gtest
+
   # Конфигурируем проект с помощью CMake, используя номер запуска для PATCH_VERSION 
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}  
   # Строим проект с помощью CMake

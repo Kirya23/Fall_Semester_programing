@@ -5,6 +5,14 @@ set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
 project(lab2 VERSION ${PROJECT_VESRION})
 
+include(FetchContent)
+# использование модуля FetchContent для объявления подмодуля с именем "googletest"
+# URL-адрес указывает зипку репозитория GoogleTest, содержащий версию 609281088cfefc76f9d0ce82e1ff6c30cc3591e5
+FetchContent_Declare(
+    googletest
+    URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip
+
+)
 # Находим Google Test 
 find_package(GTest REQUIRED) 
 if(gtest_FOUND)  
@@ -88,6 +96,7 @@ set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
 set(CPACK_PACKAGE_CONTACT example@example.com) 
 
 include(CPack) 
+include(GoogleTest)
 
 # Настройка тестов 
 enable_testing() 
