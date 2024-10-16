@@ -1,0 +1,14 @@
+# ninja log v5
+8	767	7507911792135487	gtests/CMakeFiles/tests.dir/__/main.cpp.obj	9f5d92afb65307e
+27	1214	7507911796603220	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	c96030b2f33794bf
+20	1220	7507913686847255	gtests/CMakeFiles/tests.dir/tests.cpp.obj	9e154b0e892a0cf2
+16	1688	7507911801360971	_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj	76b72a81b0635ec4
+9063	9265	7507911877120734	lib/libgtestd.a	23e460d5beed6707
+12	2819	7507911812609374	_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj	413d00e5d1c37379
+20	9060	7507911874929119	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	d39a3465092fa66d
+9265	9382	7507911878299308	lib/libgmockd.a	bbffc48d62cd2b12
+9272	9355	7507911877989211	lib/libgtest_maind.a	d352a4e729665cb9
+9383	9463	7507911879099126	lib/libgmock_maind.a	4903a5ffdee1ebff
+20	653	7507915564770963	gtests/tests.exe	7ae3c9f0e83d3d6b
+20	653	7507915564770963	gtests/tests[1]_tests.cmake	7ae3c9f0e83d3d6b
+20	653	7507915564770963	C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/gtests/tests[1]_tests.cmake	7ae3c9f0e83d3d6b

@@ -1,3 +1,0 @@
-C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
-C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
-C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir

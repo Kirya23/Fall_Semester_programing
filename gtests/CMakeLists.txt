@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(GTests) #
 enable_testing()
-
 # включает модуль CMake FetchContent, позволяет загружать и распаковывать сторонние проекты в виде подмодулей
 include(FetchContent)
 # использование модуля FetchContent для объявления подмодуля с именем "googletest"
@@ -20,16 +19,16 @@ FetchContent_MakeAvailable(googletest)
 # создает список COMMON_SRCS с одним исходным файлом cool.cpp 
 # этот файл содержит общий код, который будет использоваться в тестах
 set(COMMON_SRCS
-    "../ip_filter.cpp"
+    "../main.h"
 )
 # cоздает исполняемый файл с именем "tests", который будет содержать исходный код из файлов tests.cpp и cool.cpp
-add_executable(test_ip_address test_ip_address.cpp ${COMMON_SRCS})
+add_executable(tests tests.cpp ${COMMON_SRCS})
 # устанавливает каталоги включения для исполняемого файла tests
 # компилятор будет искать заголовочные файлы в каталоге CMAKE_SOURCE_DIR и его подкаталогах
-target_include_directories(test_ip_address PUBLIC ${CMAKE_SOURCE_DIR})
+target_include_directories(tests PUBLIC ${CMAKE_SOURCE_DIR})
 # связывает исполняемый файл tests с библиотеками gtest и gtest_main 
 # эти библиотеки предоставляют функции для написания и запуска модульных тестов
-target_link_libraries(test_ip_address PUBLIC gtest gtest_main)
+target_link_libraries(tests PUBLIC gtest gtest_main)
 
 include(GoogleTest)
-gtest_discover_tests(test_ip_address)
+gtest_discover_tests(tests)

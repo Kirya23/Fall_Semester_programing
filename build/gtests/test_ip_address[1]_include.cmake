@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/gtests/test_ip_address[1]_tests.cmake")
+  include("C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/gtests/test_ip_address[1]_tests.cmake")
+else()
+  add_test(test_ip_address_NOT_BUILT test_ip_address_NOT_BUILT)
+endif()

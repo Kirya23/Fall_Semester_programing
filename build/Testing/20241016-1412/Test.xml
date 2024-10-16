@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20241016-1412-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.28.1"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="DESKTOP-6VPG3VO"
+	OSRelease=" Professional"
+	OSVersion=" (Build 22631)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString=""
+	VendorID="Unknown Manufacturer"
+	FamilyID="0"
+	ModelID="0"
+	ProcessorCacheSize="0"
+	NumberOfLogicalCPU="16"
+	NumberOfPhysicalCPU="12"
+	TotalVirtualMemory="18379"
+	TotalPhysicalMemory="16104"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3110"
+	>
+	<Testing>
+		<StartDateTime>Oct 16 21:19 RTZ 6 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</StartDateTime>
+		<StartTestTime>1729088378</StartTestTime>
+		<TestList>
+			<Test>./test_main</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>test_main</Name>
+			<Path>.</Path>
+			<FullName>./test_main</FullName>
+			<FullCommandLine>C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\build\gtests\tests.exe</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0113381</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\build\gtests\tests.exe</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNkDEPgjAQhff+ihtlaCMwO5hoHEjUgE4NQ43VkMDVtIf+fSuYRgwY33R99/V6fXIRVELeIlZ4hRRIO3JwsaaBuDuAayvSgkkeVMKmNidV932N98oabDR6VhNvb1/wYOjBl0xCftxCp7JzROy9XrsseDCbQ+OiETwZwZNpPB3B04D/3LWngAypOmL/pUBaWX42D2TyM+TJcMEqFMOH/L77ZVGsV68/vC8K9gTf9XpE====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Oct 16 21:19 RTZ 6 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</EndDateTime>
+		<EndTestTime>1729088378</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

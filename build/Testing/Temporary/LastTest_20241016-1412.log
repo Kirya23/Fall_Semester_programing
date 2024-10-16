@@ -1,0 +1,32 @@
+Start testing: Oct 16 21:19 RTZ 6 (çèìà)
+----------------------------------------------------------
+1/4 Testing: test_main
+1/4 Test: test_main
+Command: "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/gtests/tests.exe"
+Directory: C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build
+"test_main" start time: Oct 16 21:19 RTZ 6 (çèìà)
+Output:
+----------------------------------------------------------
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from Test
+[ RUN      ] Test.1
+[       OK ] Test.1 (0 ms)
+[ RUN      ] Test.2
+[       OK ] Test.2 (0 ms)
+[ RUN      ] Test.3
+[       OK ] Test.3 (0 ms)
+[----------] 3 tests from Test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test_main" end time: Oct 16 21:19 RTZ 6 (çèìà)
+"test_main" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 16 21:19 RTZ 6 (çèìà)

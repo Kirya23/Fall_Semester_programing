@@ -1,0 +1,7 @@
+add_test([=[Test.1]=]  C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/gtests/tests.exe [==[--gtest_filter=Test.1]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Test.1]=]  PROPERTIES WORKING_DIRECTORY C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/gtests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[Test.2]=]  C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/gtests/tests.exe [==[--gtest_filter=Test.2]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Test.2]=]  PROPERTIES WORKING_DIRECTORY C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/gtests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[Test.3]=]  C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/gtests/tests.exe [==[--gtest_filter=Test.3]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[Test.3]=]  PROPERTIES WORKING_DIRECTORY C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/gtests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  tests_TESTS Test.1 Test.2 Test.3)
