@@ -1,79 +1,24 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.5.0)
 
-set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
+set(PATCH_VERSION "1" CACHE STRING "Patch version")
 set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
 project(lab2 VERSION ${PROJECT_VERSION})
 
-# Путь к googletest (измените, если нужно)
-set(googletest_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/googletest")
+set(CMAKE_CXX_STANDARD 17)
+set(CXX_STANDARD_REQUIRED ON)
 
-# Добавление библиотеки lab2
-add_library(lab2 test_ip_address.cpp)
-add_executable(lab2_cli main.cpp)
-add_executable(test_ip_address test_ip_address.cpp)
+set(CPACK_PROJECT_NAME lab2)
 
-# Установка общих свойств для lab2
-set_target_properties(lab2 PROPERTIES
-  CXX_STANDARD 14
-  CXX_STANDARD_REQUIRED ON
-)
-
-# Включить директории для lab2
-target_include_directories(lab2
-  PRIVATE "${CMAKE_BINARY_DIR}"
-)
-
-# Включить директории с заголовочными файлами gtest
-include_directories(${googletest_SOURCE_DIR}/googletest/include)
-
-# Связать с библиотеками gtest
-target_link_libraries(lab2 gtest)
-
-# Связываем lab2_cli с lab2
-target_link_libraries(lab2_cli
-  PRIVATE lab2
-)
-
-# Флаги компилятора
-if (MSVC)
-  target_compile_options(lab2_cli PRIVATE
-    /W4
-  )
-  target_compile_options(lab2 PRIVATE
-    /W4
-  )
-  target_compile_options(test_lab2 PRIVATE
-    /W4
-  )
-  target_compile_options(test_ip_address PRIVATE
-    /W4
-  )
-else ()
-  target_compile_options(lab2_cli PRIVATE
-    -Wall -Wextra -pedantic -Werror
-  )
-  target_compile_options(lab2 PRIVATE
-    -Wall -Wextra -pedantic -Werror
-  )
-
-  target_compile_options(test_ip_address PRIVATE
-    -Wall -Wextra -pedantic -Werror
-  )
-endif()
-
-# Установка
-install(TARGETS lab2_cli RUNTIME DESTINATION bin)
-
-# CPack
 # Установка пакета DEB для Linux
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
-  set(CPACK_GENERATOR DEB)
+    set(CPACK_GENERATOR DEB) # Настраивает CPack для создания пакетов DEB (Linux).
+    # Укажите зависимости пакета
+    set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-dev libstdc++6-dev")
 endif()
-
 # Установка пакета ZIP для macOS
 if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
-  set(CPACK_GENERATOR ZIP)
+    set(CPACK_GENERATOR ZIP) # Настройка CPack для создания пакетов ZIP (macOS)
 endif()
 
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
@@ -84,12 +29,8 @@ set(CPACK_PACKAGE_CONTACT example@example.com)
 
 include(CPack)
 
-# Настройка тестов
-enable_testing()
-add_test(test_lab2 test_ip_address)
-
-# Указываем директории для test_ip_address
-target_include_directories(test_ip_address PRIVATE ${googletest_SOURCE_DIR}/googletest/include)
-
-# Связываем test_ip_address с gtest
-target_link_libraries(test_ip_address gtest gtest_main)
+enable_testing() # Включает тестирование
+add_test(NAME test_main COMMAND test_ip_address) 
+add_subdirectory(gtests)
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
