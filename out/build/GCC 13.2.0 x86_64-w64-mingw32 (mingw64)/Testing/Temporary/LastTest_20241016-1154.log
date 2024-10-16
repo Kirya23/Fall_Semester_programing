@@ -1,10 +1,10 @@
-Start testing: Oct 16 19:46 RTZ 6 (çèìà)
+Start testing: Oct 16 19:55 RTZ 6 (çèìà)
 ----------------------------------------------------------
 1/1 Testing: test_lab2
 1/1 Test: test_lab2
 Command: "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)/test_ip_address.exe"
 Directory: C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)
-"test_lab2" start time: Oct 16 19:46 RTZ 6 (çèìà)
+"test_lab2" start time: Oct 16 19:55 RTZ 6 (çèìà)
 Output:
 ----------------------------------------------------------
 [==========] Running 3 tests from 1 test suite.
@@ -25,8 +25,8 @@ Output:
 Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"test_lab2" end time: Oct 16 19:46 RTZ 6 (çèìà)
+"test_lab2" end time: Oct 16 19:55 RTZ 6 (çèìà)
 "test_lab2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 16 19:46 RTZ 6 (çèìà)
+End testing: Oct 16 19:55 RTZ 6 (çèìà)

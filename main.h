@@ -27,9 +27,8 @@ struct IPAddress {
 };
 
 // Сравнение IP-адресов в обратном лексикографическом порядке
-auto compareIP = [](const IPAddress& lhs, const IPAddress& rhs) {
-    return tie(lhs.n1, lhs.n2, lhs.n3, lhs.n4) > tie(rhs.n1, rhs.n2, rhs.n3, rhs.n4);
+auto compareIP = [](const IPAddress& lhs, const IPAddress& rhs) { 
+    return tie(lhs.n1, lhs.n2, lhs.n3, lhs.n4) < tie(rhs.n1, rhs.n2, rhs.n3, rhs.n4); 
 };
-
 
 #endif
