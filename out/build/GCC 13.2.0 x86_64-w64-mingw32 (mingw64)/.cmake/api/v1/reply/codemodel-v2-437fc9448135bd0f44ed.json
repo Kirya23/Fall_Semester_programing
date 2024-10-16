@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-ed7d1e16f0fdd83c2b91.json",
+					"jsonFile" : "directory-.-Debug-2ab2b78264bc19e6083e.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.10"
@@ -44,21 +44,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "lab2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-lab2-Debug-931e75aaf9a1ff053dad.json",
+					"jsonFile" : "target-lab2-Debug-3fa4dd213b00cca0f542.json",
 					"name" : "lab2",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "lab2_cli::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-lab2_cli-Debug-df91004c87a1fa8fa7fe.json",
+					"jsonFile" : "target-lab2_cli-Debug-ecf86f3858731e4900bd.json",
 					"name" : "lab2_cli",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "test_ip_address::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test_ip_address-Debug-1420f4b1490b7bdea885.json",
+					"jsonFile" : "target-test_ip_address-Debug-46c4bbb2b5dee4adb8b4.json",
 					"name" : "test_ip_address",
 					"projectIndex" : 0
 				}

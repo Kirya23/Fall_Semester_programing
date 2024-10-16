@@ -1551,7 +1551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[C:/msys64/mingw64/lib/cmake/Boost-1.84.0/BoostConfig.cmake][cfound components: system filesystem regex unit_test_framework ][v1.84.0()]"
+			"value" : "[C:/msys64/mingw64/lib/cmake/Boost-1.84.0/BoostConfig.cmake][cfound components: system filesystem regex ][v1.84.0()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_GTest",
