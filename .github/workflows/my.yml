@@ -79,7 +79,7 @@ jobs:
       - run: |
           brew update
           brew install googletest
-          brew info gtest
+          brew info googletest
 
   # Конфигурируем проект с помощью CMake, используя номер запуска для PATCH_VERSION 
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}  
