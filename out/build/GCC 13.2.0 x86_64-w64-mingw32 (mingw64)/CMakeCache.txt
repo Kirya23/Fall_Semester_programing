@@ -335,6 +335,9 @@ lab2_BINARY_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programin
 //Value Computed by CMake
 lab2_IS_TOP_LEVEL:STATIC=ON
 
+//Dependencies for the target
+lab2_LIB_DEPENDS:STATIC=general;gtest;
+
 //Value Computed by CMake
 lab2_SOURCE_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing
 

@@ -16,7 +16,8 @@
 			"add_executable",
 			"install",
 			"target_link_libraries",
-			"target_compile_options"
+			"target_compile_options",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -30,25 +31,37 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 26,
+				"line" : 13,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 79,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 47,
+				"line" : 34,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 66,
+				"line" : 53,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 28,
 				"parent" : 0
 			}
 		]
@@ -62,20 +75,27 @@
 					"fragment" : "-g"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"fragment" : "-Wall"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"fragment" : "-Wextra"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"fragment" : "-pedantic"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"fragment" : "-Werror"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/googletest/googletest/include"
 				}
 			],
 			"language" : "CXX",
@@ -122,6 +142,11 @@
 			{
 				"backtrace" : 3,
 				"fragment" : "liblab2.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-lgtest",
 				"role" : "libraries"
 			},
 			{

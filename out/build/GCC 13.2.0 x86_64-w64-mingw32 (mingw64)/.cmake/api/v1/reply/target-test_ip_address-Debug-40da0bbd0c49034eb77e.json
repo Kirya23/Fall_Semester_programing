@@ -15,7 +15,8 @@
 		[
 			"add_executable",
 			"target_link_libraries",
-			"target_compile_options"
+			"target_compile_options",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -29,19 +30,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 29,
+				"line" : 14,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 109,
+				"line" : 95,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 73,
+				"line" : 60,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 28,
 				"parent" : 0
 			}
 		]
@@ -69,6 +76,13 @@
 				{
 					"backtrace" : 3,
 					"fragment" : "-Werror"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 4,
+					"path" : "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/googletest/googletest/include"
 				}
 			],
 			"language" : "CXX",

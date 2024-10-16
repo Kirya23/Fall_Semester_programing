@@ -1770,6 +1770,18 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "lab2_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;gtest;"
+		},
+		{
 			"name" : "lab2_SOURCE_DIR",
 			"properties" : 
 			[

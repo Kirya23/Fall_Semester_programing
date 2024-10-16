@@ -153,57 +153,6 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/FetchContent.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/ExternalProject/shared_internal_commands.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/FindGTest.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/GoogleTest.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/FindPackageMessage.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/lib/cmake/GTest/GTestConfigVersion.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/lib/cmake/GTest/GTestConfig.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/lib/cmake/GTest/GTestTargets.cmake"
-		},
-		{
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/lib/cmake/GTest/GTestTargets-release.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
 			"path" : "C:/msys64/mingw64/share/cmake/Modules/CPack.cmake"
 		},
 		{
@@ -218,11 +167,6 @@
 		{
 			"isExternal" : true,
 			"path" : "C:/msys64/mingw64/share/cmake/Templates/CPackConfig.cmake.in"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/GoogleTest.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",
