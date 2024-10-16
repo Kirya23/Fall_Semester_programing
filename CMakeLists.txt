@@ -30,7 +30,11 @@ set_target_properties(lab2 PROPERTIES
 target_include_directories(lab2  
   PRIVATE "${CMAKE_BINARY_DIR}"  
 ) 
+include_directories(${GTest_INCLUDE_DIRS})
 
+
+# Связать с библиотеками gtest
+target_link_libraries(lab2 ${GTest_LIBRARIES})
 # Связываем lab2_cli с lab2 
 target_link_libraries(lab2_cli  
   PRIVATE lab2  
