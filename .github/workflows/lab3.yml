@@ -96,7 +96,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.run_number }} # Используем номер запуска для тега
+          tag_name: ${{ github.run_number }}-mac # Используем номер запуска для тега
           release_name: ${{ github.run_number }} mac
           draft: false # Не публикуем релиз в черновике
           prerelease: false # Не публикуем как предварительную версию
