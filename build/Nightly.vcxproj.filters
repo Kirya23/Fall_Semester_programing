@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\build\CMakeFiles\b2d53b32522025506e2d18b51a38a569\Nightly.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\PiroZHoCheck_2.0\Desktop\Fall_Semester_programing\build\CMakeFiles\Nightly" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{FE3AAB9E-D94F-393E-9C74-89D181C851B5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
