@@ -1,8 +1,3 @@
-C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/lab3.dir
-C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/Experimental.dir
-C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/Nightly.dir
-C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/Continuous.dir
-C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/NightlyMemoryCheck.dir
 C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/PACKAGE.dir
 C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/RUN_TESTS.dir
 C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/ALL_BUILD.dir

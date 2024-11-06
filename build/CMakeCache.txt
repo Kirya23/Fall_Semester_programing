@@ -124,16 +124,16 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=lab3
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.1.0
+CMAKE_PROJECT_VERSION:STATIC=0.0.1
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_MINOR:STATIC=1
+CMAKE_PROJECT_VERSION_MINOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=0
+CMAKE_PROJECT_VERSION_PATCH:STATIC=1
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -264,8 +264,20 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 //File that contains suppressions for the memory checker
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
+//Patch version
+PATCH_VERSION:STRING=1
+
 //Name of the computer/site where compile is being run
 SITE:STRING=DESKTOP-6VPG3VO
+
+//Value Computed by CMake
+lab2_BINARY_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build
+
+//Value Computed by CMake
+lab2_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+lab2_SOURCE_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing
 
 //Value Computed by CMake
 lab3_BINARY_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build
@@ -295,8 +307,6 @@ CMAKE_CACHE_PATCH_VERSION:INTERNAL=0
 CMAKE_COMMAND:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cpack.exe
-//ADVANCED property for variable: CMAKE_CTEST_COMMAND
-CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/ctest.exe
 //ADVANCED property for variable: CMAKE_CXX_FLAGS

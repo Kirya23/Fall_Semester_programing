@@ -14,22 +14,6 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "BZRCOMMAND",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
-		},
-		{
 			"name" : "CMAKE_AR",
 			"properties" : 
 			[
@@ -145,10 +129,6 @@
 			"name" : "CMAKE_CTEST_COMMAND",
 			"properties" : 
 			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
 				{
 					"name" : "HELPSTRING",
 					"value" : "Path to ctest program executable."
@@ -731,7 +711,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "0.1.0"
+			"value" : "0.0.1"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION_MAJOR",
@@ -755,7 +735,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "1"
+			"value" : "0"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION_PATCH",
@@ -767,7 +747,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "0"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION_TWEAK",
@@ -1330,38 +1310,6 @@
 			"value" : "5"
 		},
 		{
-			"name" : "CVSCOMMAND",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
-		},
-		{
-			"name" : "CVS_UPDATE_OPTIONS",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
-		},
-		{
 			"name" : "DART_TESTING_TIMEOUT",
 			"properties" : 
 			[
@@ -1392,22 +1340,6 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "C:/Program Files/Git/cmd/git.exe"
-		},
-		{
-			"name" : "HGCOMMAND",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : ""
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
 		},
 		{
 			"name" : "MAKECOMMAND",
@@ -1458,20 +1390,16 @@
 			"value" : ""
 		},
 		{
-			"name" : "P4COMMAND",
+			"name" : "PATCH_VERSION",
 			"properties" : 
 			[
 				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
 					"name" : "HELPSTRING",
-					"value" : ""
+					"value" : "Patch version"
 				}
 			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
+			"type" : "STRING",
+			"value" : "1"
 		},
 		{
 			"name" : "SITE",
@@ -1490,20 +1418,40 @@
 			"value" : "DESKTOP-6VPG3VO"
 		},
 		{
-			"name" : "SVNCOMMAND",
+			"name" : "lab2_BINARY_DIR",
 			"properties" : 
 			[
 				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
 					"name" : "HELPSTRING",
-					"value" : ""
+					"value" : "Value Computed by CMake"
 				}
 			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
+			"type" : "STATIC",
+			"value" : "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build"
+		},
+		{
+			"name" : "lab2_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "lab2_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing"
 		},
 		{
 			"name" : "lab3_BINARY_DIR",
