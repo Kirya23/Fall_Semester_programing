@@ -90,7 +90,7 @@ jobs:
   # Создаем пакет
       - run: cmake --build . --target package
   # Создаем релиз для MacOS
-      - name: Create Release (MacOS)
+      - name: Create Release
         id: create_release_macos
         uses: actions/create-release@v1
         env:
