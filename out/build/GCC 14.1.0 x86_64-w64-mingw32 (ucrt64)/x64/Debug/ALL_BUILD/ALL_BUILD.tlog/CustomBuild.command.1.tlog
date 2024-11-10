@@ -1,0 +1,10 @@
+^C:\USERS\PIROZHOCHECK_2.0\DESKTOP\FALL_SEMESTER_PROGRAMING\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing "-BC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 14.1.0 x86_64-w64-mingw32 (ucrt64)" --check-stamp-file "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/out/build/GCC 14.1.0 x86_64-w64-mingw32 (ucrt64)/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
