@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.7.2)
-project(physics)
+set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
+set(PROJECT_VESRION 0.0.${PATCH_VERSION})
+project(physics VERSION ${PROJECT_VESRION})
 
 set(CMAKE_CXX_STANDARD 17)
+set(CXX_STANDARD_REQUIRED ON)
 
 # Пытаемся найти предустановленный SFML
 find_package(SFML COMPONENTS graphics)
@@ -41,14 +44,21 @@ target_compile_options(physics PRIVATE
         $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -Wpedantic>
         )
 
-# Установка пакета DEB для Linux
-if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
-    set(CPACK_GENERATOR DEB) # Настраивает CPack для создания пакетов DEB (Linux).
-    # Укажите зависимости пакета
-    set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-dev libstdc++6-dev")
-endif()
-# Установка пакета ZIP для macOS
-if (CMAKE_SYSTEM_NAME STREQUAL "Darwin")
-    set(CPACK_GENERATOR ZIP) # Настройка CPack для создания пакетов ZIP (macOS)
-endif()
 
+install(TARGETS physics DESTINATION bin)
+set(CPACK_PROJECT_NAME physics)
+
+set(CPACK_GENERATOR "ZIP;DEB")
+set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}" )
+
+set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
+
+set(CPACK_PACKAGE_CONTACT example@example.com)
+
+include(CPack)
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+
+enable_testing()

@@ -6,7 +6,8 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-2dc7ddeed481de4da615.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.7.2"
@@ -39,7 +40,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "physics::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-physics-Debug-7e279c2349f37ce15ef5.json",
+					"jsonFile" : "target-physics-Debug-984bf273f542d19d5dac.json",
 					"name" : "physics",
 					"projectIndex" : 0
 				}
