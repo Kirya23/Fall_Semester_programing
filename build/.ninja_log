@@ -1,0 +1,12 @@
+# ninja log v6
+19	266	7534602956211957	CMakeFiles/physics.dir/Color.cpp.obj	324cac8046b37d4f
+30	524	7534602956322291	CMakeFiles/physics.dir/black_box/View.cpp.obj	66c27ba15aa8d564
+12	649	7534602956138085	CMakeFiles/physics.dir/Ball.cpp.obj	4a200d5d99823018
+8	1177	7534602956098457	CMakeFiles/physics.dir/World.cpp.obj	a2f35c2da0481c2c
+15	825	7534602956176269	CMakeFiles/physics.dir/Physics.cpp.obj	b1e77fd9e3400230
+49	1017	7534602956503004	CMakeFiles/physics.dir/black_box/PainterImpl.cpp.obj	eac1e25816694370
+22	1038	7534602956245009	CMakeFiles/physics.dir/Painter.cpp.obj	10d4955539fa4168
+4	1139	7534602956043304	CMakeFiles/physics.dir/main.cpp.obj	32c2e864bbcc6500
+27	1179	7534602956286316	CMakeFiles/physics.dir/black_box/Application.cpp.obj	a5d01dda1431e74c
+20	330	7534603789595410	CMakeFiles/physics.dir/Dust.cpp.obj	6128cb8e1c33f86e
+331	460	7534603792685014	physics.exe	ba8e040156f9ffd5
