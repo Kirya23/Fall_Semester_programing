@@ -38,13 +38,6 @@ jobs:
             ctest -V # Добавлен -V для verbose output
         # Проверьте опции и настройки в CMakeLists.txt
 
-      # Загружаем релизный ассет (ZIP-архив для релизной сборки)
-      - name: Upload Release Asset
-        uses: actions/upload-artifact@v3
-        with:
-          name: release-zip
-          path: ./your-project-name-Release.zip # Путь к Release ZIP-архиву
-
       # Строим проект с конфигурацией Debug
       - name: Build Debug
         run: |
@@ -54,13 +47,6 @@ jobs:
           cmake .. -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Debug
           cmake --build . --config Debug
           cmake --build . --target package --config Debug
-
-      # Загружаем деб-пакет для Debug сборки
-      - name: Upload Debug Asset
-        uses: actions/upload-artifact@v3
-        with:
-          name: debug-deb
-          path: ./your-project-name-Debug.deb # Путь к Debug DEB-архиву
 
       # Создаем релиз на GitHub
       - name: Create Release
