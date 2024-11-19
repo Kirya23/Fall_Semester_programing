@@ -47,7 +47,6 @@ target_compile_options(physics PRIVATE
 # Установка пакета DEB для Linux
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     set(CPACK_GENERATOR DEB) # Настраивает CPack для создания пакетов DEB (Linux).
-    # Укажите зависимости пакета
     set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtk-3-dev libstdc++6-dev")
 endif()
 # Установка пакета ZIP для macOS
