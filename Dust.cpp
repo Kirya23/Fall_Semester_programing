@@ -2,13 +2,13 @@
 #include <cmath>
 
 Dust::Dust(const Velocity velocity, const Point center, double radius, const Color color, bool isCollidable, double lifetime)
-    : velocity_(velocity), center_(center), radius_(radius), color_(color), isCollidable_(isCollidable), lifetime_(lifetime) {}
+    : velocity_general(velocity), center_general(center), radius_general(radius), color_general(color), isCollidable_general(isCollidable), lifetime_general(lifetime) {}
 /**
  * Задает скорость объекта
  * @param velocity новое значение скорости
  */
 void Dust::setVelocity(const Velocity& velocity) {
-    this->velocity_ = velocity;
+    this->velocity_general = velocity;
     
 }
 
@@ -17,7 +17,7 @@ void Dust::setVelocity(const Velocity& velocity) {
  */
 Velocity Dust::getVelocity() const {
     // TODO: место для доработки
-    return velocity_;
+    return velocity_general;
 }
 
 /**
@@ -29,7 +29,7 @@ Velocity Dust::getVelocity() const {
  * @param painter контекст отрисовки
  */
 void Dust::draw(Painter& painter) const {
-    painter.draw(center_, radius_, color_);
+    painter.draw(center_general, radius_general, color_general);
 }
 
 /**
@@ -37,14 +37,14 @@ void Dust::draw(Painter& painter) const {
  * @param center новый центр объекта
  */
 void Dust::setCenter(const Point& center) {
-    this->center_ = center;
+    this->center_general = center;
 }
 
 /**
  * @return центр объекта
  */
 Point Dust::getCenter() const {
-    return center_;
+    return center_general;
 }
 
 /**
@@ -53,7 +53,7 @@ Point Dust::getCenter() const {
  * не требуется
  */
 double Dust::getRadius() const {
-    return radius_;
+    return radius_general;
 }
 
 /**
@@ -64,15 +64,15 @@ double Dust::getRadius() const {
  * эквивалентна объему: PI * radius^3 * 4. / 3.
  */
 double Dust::getMass() const {
-    return  M_PI * pow(radius_, 3) * 4. / 3.;
+    return  M_PI * pow(radius_general, 3) * 4. / 3.;
 }
 
 bool Dust::ifAlive() const {
-    return isAlive_;
+    return isAlive_general;
 }
 
 
 void Dust::dying(double time){
-    lifetime_ -= time;
-    if (lifetime_ <= 0){ isAlive_ = false; }
+    lifetime_general -= time;
+    if (lifetime_general <= 0){ isAlive_general = false; }
 }

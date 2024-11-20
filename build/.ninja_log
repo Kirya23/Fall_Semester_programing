@@ -10,3 +10,15 @@
 27	1179	7534602956286316	CMakeFiles/physics.dir/black_box/Application.cpp.obj	a5d01dda1431e74c
 20	330	7534603789595410	CMakeFiles/physics.dir/Dust.cpp.obj	6128cb8e1c33f86e
 331	460	7534603792685014	physics.exe	ba8e040156f9ffd5
+105	862	7538121031922393	CMakeFiles/physics.dir/Ball.cpp.obj	4a200d5d99823018
+120	971	7538121032076837	CMakeFiles/physics.dir/Physics.cpp.obj	b1e77fd9e3400230
+90	1402	7538121031773718	CMakeFiles/physics.dir/World.cpp.obj	a2f35c2da0481c2c
+79	1582	7538121031647682	CMakeFiles/physics.dir/main.cpp.obj	32c2e864bbcc6500
+135	1851	7538121032227872	CMakeFiles/physics.dir/black_box/Application.cpp.obj	a5d01dda1431e74c
+1851	2215	7538121049384060	physics.exe	ba8e040156f9ffd5
+114	1684	7538163071664218	CMakeFiles/physics.dir/Dust.cpp.obj	6128cb8e1c33f86e
+102	1718	7538163071530288	CMakeFiles/physics.dir/Physics.cpp.obj	b1e77fd9e3400230
+74	1935	7538163071249260	CMakeFiles/physics.dir/main.cpp.obj	32c2e864bbcc6500
+127	1975	7538163071789177	CMakeFiles/physics.dir/black_box/Application.cpp.obj	a5d01dda1431e74c
+89	1976	7538163071424094	CMakeFiles/physics.dir/World.cpp.obj	a2f35c2da0481c2c
+1977	2239	7538163090287245	physics.exe	ba8e040156f9ffd5

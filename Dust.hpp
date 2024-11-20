@@ -25,12 +25,12 @@ public:
 
     
 private:
-    Velocity velocity_;
-    Point center_;
-    double radius_;
-    Color color_;
-    bool isCollidable_;
-    double lifetime_;
-    bool isAlive_ = true;
+    Velocity velocity_general;
+    Point center_general;
+    double radius_general;
+    Color color_general;
+    bool isCollidable_general;
+    double lifetime_general;
+    bool isAlive_general = true;
 };
 

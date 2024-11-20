@@ -2,14 +2,14 @@
 #include <cmath>
 
 Ball::Ball(const Velocity velocity, const Point center,  double radius, const Color color, bool isCollidable): 
-     velocity_(velocity), center_(center), radius_(radius), color_(color), isCollidable_(isCollidable) {}
+     velocity_general(velocity), center_general(center), radius_general(radius), color_general(color), isCollidable_general(isCollidable) {}
 
 /**
  * Задает скорость объекта
  * @param velocity новое значение скорости
  */
 void Ball::setVelocity(const Velocity& velocity) {
-    this->velocity_ = velocity;
+    this->velocity_general = velocity;
     
 }
 
@@ -18,7 +18,7 @@ void Ball::setVelocity(const Velocity& velocity) {
  */
 Velocity Ball::getVelocity() const {
     // TODO: место для доработки
-    return velocity_;
+    return velocity_general;
 }
 
 /**
@@ -30,7 +30,7 @@ Velocity Ball::getVelocity() const {
  * @param painter контекст отрисовки
  */
 void Ball::draw(Painter& painter) const {
-    painter.draw(center_, radius_, color_);
+    painter.draw(center_general, radius_general, color_general);
 }
 
 /**
@@ -38,14 +38,14 @@ void Ball::draw(Painter& painter) const {
  * @param center новый центр объекта
  */
 void Ball::setCenter(const Point& center) {
-    this->center_ = center;
+    this->center_general = center;
 }
 
 /**
  * @return центр объекта
  */
 Point Ball::getCenter() const {
-    return center_;
+    return center_general;
 }
 
 /**
@@ -54,7 +54,7 @@ Point Ball::getCenter() const {
  * не требуется
  */
 double Ball::getRadius() const {
-    return radius_;
+    return radius_general;
 }
 
 /**
@@ -65,15 +65,15 @@ double Ball::getRadius() const {
  * эквивалентна объему: PI * radius^3 * 4. / 3.
  */
 double Ball::getMass() const {
-    return  M_PI * pow(radius_, 3) * 4. / 3.;
+    return  M_PI * pow(radius_general, 3) * 4. / 3.;
 }
 
 Color Ball::getColor() const {
-    return color_;
+    return color_general;
 }
 
 bool Ball::ifCollidable() const{
-    return isCollidable_;
+    return isCollidable_general;
 }
 
 
