@@ -1,62 +1,38 @@
 [
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -isystem C:/SFML/SFML-2.6.2/include -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\physics.dir\\main.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\main.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -o CMakeFiles\\lab6.dir\\main.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\main.cpp",
   "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\main.cpp",
-  "output": "CMakeFiles\\physics.dir\\main.cpp.obj"
+  "output": "CMakeFiles\\lab6.dir\\main.cpp.obj"
 },
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -isystem C:/SFML/SFML-2.6.2/include -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\physics.dir\\World.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\World.cpp",
-  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\World.cpp",
-  "output": "CMakeFiles\\physics.dir\\World.cpp.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -o CMakeFiles\\lab6.dir\\Document.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Document.cpp",
+  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Document.cpp",
+  "output": "CMakeFiles\\lab6.dir\\Document.cpp.obj"
 },
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -isystem C:/SFML/SFML-2.6.2/include -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\physics.dir\\Ball.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Ball.cpp",
-  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Ball.cpp",
-  "output": "CMakeFiles\\physics.dir\\Ball.cpp.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -o CMakeFiles\\lab6.dir\\Circle.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Circle.cpp",
+  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Circle.cpp",
+  "output": "CMakeFiles\\lab6.dir\\Circle.cpp.obj"
 },
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -isystem C:/SFML/SFML-2.6.2/include -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\physics.dir\\Physics.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Physics.cpp",
-  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Physics.cpp",
-  "output": "CMakeFiles\\physics.dir\\Physics.cpp.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -o CMakeFiles\\lab6.dir\\Line.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Line.cpp",
+  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Line.cpp",
+  "output": "CMakeFiles\\lab6.dir\\Line.cpp.obj"
 },
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -isystem C:/SFML/SFML-2.6.2/include -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\physics.dir\\Color.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Color.cpp",
-  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Color.cpp",
-  "output": "CMakeFiles\\physics.dir\\Color.cpp.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -o CMakeFiles\\lab6.dir\\Shape.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Shape.cpp",
+  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Shape.cpp",
+  "output": "CMakeFiles\\lab6.dir\\Shape.cpp.obj"
 },
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -isystem C:/SFML/SFML-2.6.2/include -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\physics.dir\\Painter.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Painter.cpp",
-  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Painter.cpp",
-  "output": "CMakeFiles\\physics.dir\\Painter.cpp.obj"
-},
-{
-  "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -isystem C:/SFML/SFML-2.6.2/include -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\physics.dir\\Dust.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Dust.cpp",
-  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\Dust.cpp",
-  "output": "CMakeFiles\\physics.dir\\Dust.cpp.obj"
-},
-{
-  "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -isystem C:/SFML/SFML-2.6.2/include -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\physics.dir\\black_box\\Application.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\black_box\\Application.cpp",
-  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\black_box\\Application.cpp",
-  "output": "CMakeFiles\\physics.dir\\black_box\\Application.cpp.obj"
-},
-{
-  "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -isystem C:/SFML/SFML-2.6.2/include -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\physics.dir\\black_box\\View.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\black_box\\View.cpp",
-  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\black_box\\View.cpp",
-  "output": "CMakeFiles\\physics.dir\\black_box\\View.cpp.obj"
-},
-{
-  "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -isystem C:/SFML/SFML-2.6.2/include -g -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles\\physics.dir\\black_box\\PainterImpl.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\black_box\\PainterImpl.cpp",
-  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\black_box\\PainterImpl.cpp",
-  "output": "CMakeFiles\\physics.dir\\black_box\\PainterImpl.cpp.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -o CMakeFiles\\lab6.dir\\View.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\View.cpp",
+  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\View.cpp",
+  "output": "CMakeFiles\\lab6.dir\\View.cpp.obj"
 }
 ]
