@@ -55,32 +55,32 @@ build CMakeFiles/lab6.dir/main.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/U
   OBJECT_DIR = CMakeFiles\lab6.dir
   OBJECT_FILE_DIR = CMakeFiles\lab6.dir
 
-build CMakeFiles/lab6.dir/Document.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/Document.cpp || cmake_object_order_depends_target_lab6
-  DEP_FILE = CMakeFiles\lab6.dir\Document.cpp.obj.d
+build CMakeFiles/lab6.dir/document.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/document.cpp || cmake_object_order_depends_target_lab6
+  DEP_FILE = CMakeFiles\lab6.dir\document.cpp.obj.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles\lab6.dir
   OBJECT_FILE_DIR = CMakeFiles\lab6.dir
 
-build CMakeFiles/lab6.dir/Circle.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/Circle.cpp || cmake_object_order_depends_target_lab6
-  DEP_FILE = CMakeFiles\lab6.dir\Circle.cpp.obj.d
+build CMakeFiles/lab6.dir/view.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/view.cpp || cmake_object_order_depends_target_lab6
+  DEP_FILE = CMakeFiles\lab6.dir\view.cpp.obj.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles\lab6.dir
   OBJECT_FILE_DIR = CMakeFiles\lab6.dir
 
-build CMakeFiles/lab6.dir/Line.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/Line.cpp || cmake_object_order_depends_target_lab6
-  DEP_FILE = CMakeFiles\lab6.dir\Line.cpp.obj.d
+build CMakeFiles/lab6.dir/controller.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/controller.cpp || cmake_object_order_depends_target_lab6
+  DEP_FILE = CMakeFiles\lab6.dir\controller.cpp.obj.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles\lab6.dir
   OBJECT_FILE_DIR = CMakeFiles\lab6.dir
 
-build CMakeFiles/lab6.dir/Shape.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/Shape.cpp || cmake_object_order_depends_target_lab6
-  DEP_FILE = CMakeFiles\lab6.dir\Shape.cpp.obj.d
+build CMakeFiles/lab6.dir/model.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/model.cpp || cmake_object_order_depends_target_lab6
+  DEP_FILE = CMakeFiles\lab6.dir\model.cpp.obj.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles\lab6.dir
   OBJECT_FILE_DIR = CMakeFiles\lab6.dir
 
-build CMakeFiles/lab6.dir/View.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/View.cpp || cmake_object_order_depends_target_lab6
-  DEP_FILE = CMakeFiles\lab6.dir\View.cpp.obj.d
+build CMakeFiles/lab6.dir/primitive.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/primitive.cpp || cmake_object_order_depends_target_lab6
+  DEP_FILE = CMakeFiles\lab6.dir\primitive.cpp.obj.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles\lab6.dir
   OBJECT_FILE_DIR = CMakeFiles\lab6.dir
@@ -93,7 +93,7 @@ build CMakeFiles/lab6.dir/View.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/U
 #############################################
 # Link the executable lab6.exe
 
-build lab6.exe: CXX_EXECUTABLE_LINKER__lab6_Debug CMakeFiles/lab6.dir/main.cpp.obj CMakeFiles/lab6.dir/Document.cpp.obj CMakeFiles/lab6.dir/Circle.cpp.obj CMakeFiles/lab6.dir/Line.cpp.obj CMakeFiles/lab6.dir/Shape.cpp.obj CMakeFiles/lab6.dir/View.cpp.obj
+build lab6.exe: CXX_EXECUTABLE_LINKER__lab6_Debug CMakeFiles/lab6.dir/main.cpp.obj CMakeFiles/lab6.dir/document.cpp.obj CMakeFiles/lab6.dir/view.cpp.obj CMakeFiles/lab6.dir/controller.cpp.obj CMakeFiles/lab6.dir/model.cpp.obj CMakeFiles/lab6.dir/primitive.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab6.dir

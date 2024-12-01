@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5.0)
 project(lab6 VERSION 0.1.0 LANGUAGES C CXX)
 
-add_executable(lab6 main.cpp Document.cpp Circle.cpp Line.cpp Shape.cpp View.cpp)
+add_executable(lab6 main.cpp document.cpp view.cpp controller.cpp model.cpp primitive.cpp)
 
 include(CTest)
 enable_testing()

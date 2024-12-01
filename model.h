@@ -1,12 +1,16 @@
-#ifndef DOCUMENT_H
-#define DOCUMENT_H
+#ifndef MODEL_H
+#define MODEL_H
 
-#include <memory>
 #include <vector>
+#include <memory>
+#include <string>
 #include "primitive.h"
 
-class Document {
+class Model {
 public:
+    void createDocument();
+    void importDocument(const std::string& filename);
+    void exportDocument(const std::string& filename);
     void createPrimitive(const std::string& type, int x, int y, int size);
     void deletePrimitive(int index);
     const std::vector<std::shared_ptr<Primitive>>& getPrimitives() const;
@@ -15,4 +19,4 @@ private:
     std::vector<std::shared_ptr<Primitive>> primitives;
 };
 
-#endif // DOCUMENT_H
+#endif // MODEL_H

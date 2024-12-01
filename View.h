@@ -1,16 +1,13 @@
 #ifndef VIEW_H
 #define VIEW_H
 
-#include "Document.h"
+#include <vector>
+#include <memory>
+#include "primitive.h"
 
 class View {
 public:
-    View(Document& doc);
-    void draw(); // Рисует все фигуры из документа
-    // ... другие методы для взаимодействия с GUI ...
-
-private:
-    Document& document;
+    void displayPrimitives(const std::vector<std::shared_ptr<Primitive>>& primitives);
 };
-#endif
 
+#endif // VIEW_H

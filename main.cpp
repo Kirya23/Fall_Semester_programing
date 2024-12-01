@@ -1,26 +1,24 @@
-#include "Document.h"
-#include "Line.h"
-#include "Circle.h"
-#include "View.h"
 #include <iostream>
-#include <fstream>
+#include <memory>
+#include "controller.h"
 
 int main() {
-  Document doc;
-  View view(doc);
+    Controller controller;
 
-  // Пример создания и добавления фигур:
-  doc.addShape(std::make_unique<Line>(10, 10, 100, 100));
-  doc.addShape(std::make_unique<Circle>(50, 50, 25));
+    // Создание нового документа
+    controller.createDocument();
 
-  // Пример сохранения:
-  doc.saveToFile("mydrawing.txt");
+    // Импорт документа из файла
+    controller.importDocument("document.txt");
 
-  // Пример загрузки:
-  doc.loadFromFile("mydrawing.txt");
+    // Экспорт документа в файл
+    controller.exportDocument("exported_document.txt");
 
-  view.draw(); // Рисуем фигуры (простая заглушка)
+    // Создание графического примитива
+    controller.createPrimitive("Circle", 10, 20, 5); // Пример: Circle с координатами (10, 20) и радиусом 5
+    
+    // Удаление графического примитива
+    controller.deletePrimitive(0); // Удаляем первый примитив
 
-  return 0;
+    return 0;
 }
-
