@@ -55,7 +55,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.run_number }}-Linux5
+          tag_name: ${{ github.run_number }}-Linux6
           release_name: Release ${{ github.run_number }} for linux
           draft: false
           prerelease: false
@@ -105,7 +105,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.run_number }}-mac # Используем номер запуска для тега
+          tag_name: ${{ github.run_number }}-mac6 # Используем номер запуска для тега
           release_name: Release ${{ github.run_number }} for macOS
           draft: false # Не публикуем релиз в черновике
           prerelease: false # Не публикуем как предварительную версию

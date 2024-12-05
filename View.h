@@ -10,4 +10,4 @@ public:
     void displayPrimitives(const std::vector<std::shared_ptr<Primitive>>& primitives);
 };
 
-#endif // VIEW_H
+#endif 
