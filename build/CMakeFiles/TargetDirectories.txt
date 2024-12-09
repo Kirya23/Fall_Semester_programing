@@ -1,4 +1,4 @@
-C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/lab6.dir
+C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/lab7.dir
 C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/Experimental.dir
 C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/Nightly.dir
 C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/CMakeFiles/Continuous.dir

@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: lab6
+# Project: lab7
 # Configurations: Debug
 # =============================================================================
 
@@ -41,77 +41,40 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target lab6
+# Object build statements for EXECUTABLE target lab7
 
 
 #############################################
-# Order-only phony target for lab6
+# Order-only phony target for lab7
 
-build cmake_object_order_depends_target_lab6: phony || .
+build cmake_object_order_depends_target_lab7: phony || .
 
-build CMakeFiles/lab6.dir/main.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/main.cpp || cmake_object_order_depends_target_lab6
-  DEP_FILE = CMakeFiles\lab6.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++17
-  INCLUDES = -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing
-  OBJECT_DIR = CMakeFiles\lab6.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab6.dir
-  TARGET_COMPILE_PDB = CMakeFiles\lab6.dir\
-  TARGET_PDB = lab6.pdb
-
-build CMakeFiles/lab6.dir/view.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/view.cpp || cmake_object_order_depends_target_lab6
-  DEP_FILE = CMakeFiles\lab6.dir\view.cpp.obj.d
-  FLAGS = -g -std=gnu++17
-  INCLUDES = -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing
-  OBJECT_DIR = CMakeFiles\lab6.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab6.dir
-  TARGET_COMPILE_PDB = CMakeFiles\lab6.dir\
-  TARGET_PDB = lab6.pdb
-
-build CMakeFiles/lab6.dir/controller.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/controller.cpp || cmake_object_order_depends_target_lab6
-  DEP_FILE = CMakeFiles\lab6.dir\controller.cpp.obj.d
-  FLAGS = -g -std=gnu++17
-  INCLUDES = -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing
-  OBJECT_DIR = CMakeFiles\lab6.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab6.dir
-  TARGET_COMPILE_PDB = CMakeFiles\lab6.dir\
-  TARGET_PDB = lab6.pdb
-
-build CMakeFiles/lab6.dir/model.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/model.cpp || cmake_object_order_depends_target_lab6
-  DEP_FILE = CMakeFiles\lab6.dir\model.cpp.obj.d
-  FLAGS = -g -std=gnu++17
-  INCLUDES = -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing
-  OBJECT_DIR = CMakeFiles\lab6.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab6.dir
-  TARGET_COMPILE_PDB = CMakeFiles\lab6.dir\
-  TARGET_PDB = lab6.pdb
-
-build CMakeFiles/lab6.dir/primitive.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/primitive.cpp || cmake_object_order_depends_target_lab6
-  DEP_FILE = CMakeFiles\lab6.dir\primitive.cpp.obj.d
-  FLAGS = -g -std=gnu++17
-  INCLUDES = -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing
-  OBJECT_DIR = CMakeFiles\lab6.dir
-  OBJECT_FILE_DIR = CMakeFiles\lab6.dir
-  TARGET_COMPILE_PDB = CMakeFiles\lab6.dir\
-  TARGET_PDB = lab6.pdb
+build CMakeFiles/lab7.dir/main.cpp.obj: CXX_COMPILER__lab7_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/main.cpp || cmake_object_order_depends_target_lab7
+  DEP_FILE = CMakeFiles\lab7.dir\main.cpp.obj.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles\lab7.dir
+  OBJECT_FILE_DIR = CMakeFiles\lab7.dir
+  TARGET_COMPILE_PDB = CMakeFiles\lab7.dir\
+  TARGET_PDB = lab7.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target lab6
+# Link build statements for EXECUTABLE target lab7
 
 
 #############################################
-# Link the executable lab6.exe
+# Link the executable lab7.exe
 
-build lab6.exe: CXX_EXECUTABLE_LINKER__lab6_Debug CMakeFiles/lab6.dir/main.cpp.obj CMakeFiles/lab6.dir/view.cpp.obj CMakeFiles/lab6.dir/controller.cpp.obj CMakeFiles/lab6.dir/model.cpp.obj CMakeFiles/lab6.dir/primitive.cpp.obj
+build lab7.exe: CXX_EXECUTABLE_LINKER__lab7_Debug CMakeFiles/lab7.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\lab6.dir
+  OBJECT_DIR = CMakeFiles\lab7.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\lab6.dir\
-  TARGET_FILE = lab6.exe
-  TARGET_IMPLIB = liblab6.dll.a
-  TARGET_PDB = lab6.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\lab7.dir\
+  TARGET_FILE = lab7.exe
+  TARGET_IMPLIB = liblab7.dll.a
+  TARGET_PDB = lab7.pdb
 
 
 #############################################
@@ -567,7 +530,7 @@ build CMakeFiles/ContinuousSubmit | ${cmake_ninja_workdir}CMakeFiles/ContinuousS
 # =============================================================================
 # Target aliases.
 
-build lab6: phony lab6.exe
+build lab7: phony lab7.exe
 
 # =============================================================================
 # Folder targets.
@@ -577,7 +540,7 @@ build lab6: phony lab6.exe
 #############################################
 # Folder: C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build
 
-build all: phony lab6.exe
+build all: phony lab7.exe
 
 # =============================================================================
 # Built-in targets

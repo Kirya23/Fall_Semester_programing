@@ -112,7 +112,7 @@ CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_S
 CMAKE_GNUtoMS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/lab6
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/lab7
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/msys64/mingw64/bin/ld.exe
@@ -156,7 +156,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=lab6
+CMAKE_PROJECT_NAME:STATIC=lab7
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -315,13 +315,13 @@ MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 SITE:STRING=DESKTOP-6VPG3VO
 
 //Value Computed by CMake
-lab6_BINARY_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build
+lab7_BINARY_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build
 
 //Value Computed by CMake
-lab6_IS_TOP_LEVEL:STATIC=ON
+lab7_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-lab6_SOURCE_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing
+lab7_SOURCE_DIR:STATIC=C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing
 
 
 ########################
