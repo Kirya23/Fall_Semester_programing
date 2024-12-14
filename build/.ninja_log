@@ -1,7 +1,7 @@
 # ninja log v6
-10	392	7549992012964147	CMakeFiles/lab6.dir/view.cpp.obj	8df889cec23146cc
-23	590	7547492852563719	CMakeFiles/lab6.dir/primitive.cpp.obj	404e620e7f6dbff6
-7	470	7550114899112241	CMakeFiles/lab6.dir/main.cpp.obj	206f0006634c4b16
-470	597	7550114903752220	lab6.exe	14fec477c1b2556c
-38	647	7550114558397144	CMakeFiles/lab6.dir/controller.cpp.obj	eae34824e4d2b17d
-41	710	7550114558421943	CMakeFiles/lab6.dir/model.cpp.obj	c026c0ac0a41415c
+69	590	7558587558955360	CMakeFiles/lab6.dir/view.cpp.obj	8df889cec23146cc
+79	593	7558587559025623	CMakeFiles/lab6.dir/primitive.cpp.obj	404e620e7f6dbff6
+66	661	7558587558915353	CMakeFiles/lab6.dir/main.cpp.obj	206f0006634c4b16
+784	917	7558587566084745	lab6.exe	14fec477c1b2556c
+72	709	7558587558965359	CMakeFiles/lab6.dir/controller.cpp.obj	eae34824e4d2b17d
+76	783	7558587558995630	CMakeFiles/lab6.dir/model.cpp.obj	c026c0ac0a41415c

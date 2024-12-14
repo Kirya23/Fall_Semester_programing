@@ -7,9 +7,9 @@
 },
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing -g -std=gnu++17 -o CMakeFiles\\lab6.dir\\view.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\view.cpp",
-  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\view.cpp",
-  "output": "CMakeFiles\\lab6.dir\\view.cpp.obj"
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing -g -std=gnu++17 -o CMakeFiles\\lab6.dir\\View.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\View.cpp",
+  "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\View.cpp",
+  "output": "CMakeFiles\\lab6.dir\\View.cpp.obj"
 },
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",

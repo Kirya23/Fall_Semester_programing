@@ -58,8 +58,8 @@ build CMakeFiles/lab6.dir/main.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/U
   TARGET_COMPILE_PDB = CMakeFiles\lab6.dir\
   TARGET_PDB = lab6.pdb
 
-build CMakeFiles/lab6.dir/view.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/view.cpp || cmake_object_order_depends_target_lab6
-  DEP_FILE = CMakeFiles\lab6.dir\view.cpp.obj.d
+build CMakeFiles/lab6.dir/View.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug C$:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/View.cpp || cmake_object_order_depends_target_lab6
+  DEP_FILE = CMakeFiles\lab6.dir\View.cpp.obj.d
   FLAGS = -g -std=gnu++17
   INCLUDES = -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing
   OBJECT_DIR = CMakeFiles\lab6.dir
@@ -102,7 +102,7 @@ build CMakeFiles/lab6.dir/primitive.cpp.obj: CXX_COMPILER__lab6_unscanned_Debug 
 #############################################
 # Link the executable lab6.exe
 
-build lab6.exe: CXX_EXECUTABLE_LINKER__lab6_Debug CMakeFiles/lab6.dir/main.cpp.obj CMakeFiles/lab6.dir/view.cpp.obj CMakeFiles/lab6.dir/controller.cpp.obj CMakeFiles/lab6.dir/model.cpp.obj CMakeFiles/lab6.dir/primitive.cpp.obj
+build lab6.exe: CXX_EXECUTABLE_LINKER__lab6_Debug CMakeFiles/lab6.dir/main.cpp.obj CMakeFiles/lab6.dir/View.cpp.obj CMakeFiles/lab6.dir/controller.cpp.obj CMakeFiles/lab6.dir/model.cpp.obj CMakeFiles/lab6.dir/primitive.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\lab6.dir
