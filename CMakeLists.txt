@@ -15,9 +15,7 @@ install(TARGETS lab7 DESTINATION bin)
 set(CPACK_GENERATOR "ZIP")
 set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
 set(CPACK_PACKAGE_NAME "lab7")
-set(CPACK_PACKAGE_DESCRIPTION "Описание вашего проекта")
-set(CPACK_PACKAGE_VENDOR "Ваше имя или компания")
-set(CPACK_PACKAGE_CONTACT "Ваш контактный email")
+
 include(CPack)
 
 set(BOOST_ROOT "${PROJECT_SOURCE_DIR}/boost") # Относительный путь

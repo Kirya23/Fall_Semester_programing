@@ -79,14 +79,6 @@ void shouldProcessFile(const fs::directory_entry& entry, const std::vector<fs::p
         // Сохраняем путь к файлу и его хэши в hashVector
         hashVector.emplace_back(entry.path(), hashes);
 
-        //мое лучшее решение в жизни, но не удовлетворяет условиям лабы :(
-        // try {
-        //     auto hashes = file_processing(entry.path(), blockSize);
-        //     std::string hashKey(reinterpret_cast<const char*>(hashes.data()), hashes.size() * sizeof(uint32_t));
-        //     hashMap[hashKey].push_back(entry.path());
-        // } catch (const std::exception& e) {
-        //     std::cerr << e.what() << std::endl;
-        // }     
     }
 }
 
@@ -135,16 +127,7 @@ void find_duplicates(const std::vector<fs::path>& directories, const std::vector
         
     }
 
-    // // Вывод результатов
-    // for (const auto& [hashKey, files] : hashMap) {
-    //     if (files.size() > 1) { // Если есть дубликаты
-    //         std::cout << "Дубликаты:\n";
-    //         for (const auto& file : files) {
-    //             std::cout << file << std::endl;
-    //         }
-    //         std::cout << std::endl; // Разделяем группы дубликатов пустой строкой
-    //     }
-    // }
+   
 }
 
 int main() {
@@ -221,110 +204,3 @@ int main() {
     }
     return 0;
 }
-
-// //./lab7 -p C:/Users/Sopha/Downloads/lab7/dir1 -p C:/Users/Sopha/Downloads/lab7/dir2 -e C:/Users/Sopha/Downloads/lab7/dir1/dirindir1 -b 5 -m "*.txt" -s 1 -min 1
-// int main(int argc, char* argv[]) {
-//     std::vector<fs::path> directories;
-//     std::vector<fs::path> exclusions;
-//     size_t blockSize = 4096;
-//     size_t minSize = 1;
-//     int scanLevel = 1;
-//     std::string maskString = "*.txt"; // Значение по умолчанию
-
-
-//     // Разбор аргументов командной строки
-//     for (int i = 1; i < argc; ++i) {
-//         std::string arg = argv[i];
-//         if (arg == "-p" || arg == "--path") { 
-//             if (++i < argc) {
-//                 directories.push_back(argv[i]);
-//             } else {
-//                 std::cerr << "Ошибка: параметр -p/--path требует аргумент.\n";
-//                 return 1;
-//             }
-//         } else if (arg == "-e" || arg == "--exclude") {
-//             if (++i < argc) {
-//                 exclusions.push_back(argv[i]);
-//             } else {
-//                 std::cerr << "Ошибка: параметр -e/--exclude требует аргумент.\n";
-//                 return 1;
-//             }
-//         } else if (arg == "-b" || arg == "--block-size") {
-//             if (++i < argc) {
-//                 try {
-//                     blockSize = std::stoul(argv[i]);
-//                 } catch (const std::invalid_argument& e) {
-//                     std::cerr << "Ошибка: некорректное значение для параметра -b/--block-size.\n";
-//                     return 1;
-//                 } catch (const std::out_of_range& e) {
-//                     std::cerr << "Ошибка: значение для параметра -b/--block-size слишком большое.\n";
-//                     return 1;
-//                 }
-//             } else {
-//                 std::cerr << "Ошибка: параметр -b/--block-size требует аргумент.\n";
-//                 return 1;
-//             }
-//         } else if (arg == "-m" || arg == "--mask") {
-//             if (++i < argc) {
-//                 maskString = argv[i];
-//             } else {
-//                 std::cerr << "Ошибка: параметр -m/--mask требует аргумент.\n";
-//                 return 1;
-//             }
-//         } else if (arg == "-s" || arg == "--scan-level") {
-//             if (++i < argc) {
-//                 try {
-//                     scanLevel = std::stoi(argv[i]);
-//                     if (scanLevel < 0 || scanLevel > 1) {
-//                         std::cerr << "Ошибка: значение параметра -s/--scan-level должно быть 0 или 1.\n";
-//                         return 1;
-//                     }
-//                 } catch (const std::invalid_argument& e) {
-//                     std::cerr << "Ошибка: некорректное значение для параметра -s/--scan-level.\n";
-//                     return 1;
-//                 } catch (const std::out_of_range& e) {
-//                     std::cerr << "Ошибка: значение для параметра -s/--scan-level слишком большое.\n";
-//                     return 1;
-//                 }
-//             } else {
-//                 std::cerr << "Ошибка: параметр -s/--scan-level требует аргумент.\n";
-//                 return 1;
-//             }
-//         } else if (arg == "-min" || arg == "--min-size") {
-//             if (++i < argc) {
-//                 try {
-//                     minSize = std::stoul(argv[i]);
-//                 } catch (const std::invalid_argument& e) {
-//                     std::cerr << "Ошибка: некорректное значение для параметра -min/--min-size.\n";
-//                     return 1;
-//                 } catch (const std::out_of_range& e) {
-//                     std::cerr << "Ошибка: значение для параметра -min/--min-size слишком большое.\n";
-//                     return 1;
-//                 }
-//             } else {
-//                 std::cerr << "Ошибка: параметр -min/--min-size требует аргумент.\n";
-//                 return 1;
-//             }
-//         }
-//         else {
-//             std::cerr << "Неизвестный параметр: " << arg << "\n";
-//             return 1;
-//         }
-//     }
-
-//     // Проверка на обязательный параметр --path
-//     if (directories.empty()) {
-//         std::cerr << "Ошибка: Необходимо указать хотя бы один путь с помощью параметра -p/--path.\n";
-//         return 1;
-//     }
-
-
-//     try {
-//         std::regex maskRegex(maskString, std::regex_constants::icase);
-//         find_duplicates(directories, exclusions, blockSize, minSize, maskRegex, scanLevel);
-//     } catch (const std::regex_error& e) {
-//         std::cerr << "Ошибка в регулярном выражении: " << e.what() << '\n';
-//         return 1;
-//     }
-//     return 0;
-// }
