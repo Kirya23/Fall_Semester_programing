@@ -3,7 +3,7 @@ project(lab6 VERSION 0.1.0 LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(lab6 main.cpp view.cpp controller.cpp model.cpp primitive.cpp)
+add_executable(lab6 main.cpp View.cpp controller.cpp model.cpp primitive.cpp)
 
 include_directories(${CMAKE_SOURCE_DIR})
 

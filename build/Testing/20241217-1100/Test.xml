@@ -24,11 +24,11 @@
 	ProcessorClockFrequency="3110"
 	>
 	<Testing>
-		<StartDateTime>Dec 17 18:00 RTZ 6 (зима)</StartDateTime>
-		<StartTestTime>1734433234</StartTestTime>
+		<StartDateTime>Dec 17 18:08 RTZ 6 (зима)</StartDateTime>
+		<StartTestTime>1734433711</StartTestTime>
 		<TestList/>
-		<EndDateTime>Dec 17 18:00 RTZ 6 (зима)</EndDateTime>
-		<EndTestTime>1734433234</EndTestTime>
+		<EndDateTime>Dec 17 18:08 RTZ 6 (зима)</EndDateTime>
+		<EndTestTime>1734433711</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>
