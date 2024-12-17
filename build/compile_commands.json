@@ -1,31 +1,31 @@
 [
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing -g -std=gnu++17 -o CMakeFiles\\lab6.dir\\main.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\main.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  -std=c++17 -g -o CMakeFiles\\lab6.dir\\main.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\main.cpp",
   "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\main.cpp",
   "output": "CMakeFiles\\lab6.dir\\main.cpp.obj"
 },
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing -g -std=gnu++17 -o CMakeFiles\\lab6.dir\\View.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\View.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  -std=c++17 -g -o CMakeFiles\\lab6.dir\\View.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\View.cpp",
   "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\View.cpp",
   "output": "CMakeFiles\\lab6.dir\\View.cpp.obj"
 },
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing -g -std=gnu++17 -o CMakeFiles\\lab6.dir\\controller.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\controller.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  -std=c++17 -g -o CMakeFiles\\lab6.dir\\controller.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\controller.cpp",
   "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\controller.cpp",
   "output": "CMakeFiles\\lab6.dir\\controller.cpp.obj"
 },
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing -g -std=gnu++17 -o CMakeFiles\\lab6.dir\\model.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\model.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  -std=c++17 -g -o CMakeFiles\\lab6.dir\\model.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\model.cpp",
   "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\model.cpp",
   "output": "CMakeFiles\\lab6.dir\\model.cpp.obj"
 },
 {
   "directory": "C:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -IC:/Users/PiroZHoCheck_2.0/Desktop/Fall_Semester_programing -g -std=gnu++17 -o CMakeFiles\\lab6.dir\\primitive.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\primitive.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe  -std=c++17 -g -o CMakeFiles\\lab6.dir\\primitive.cpp.obj -c C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\primitive.cpp",
   "file": "C:\\Users\\PiroZHoCheck_2.0\\Desktop\\Fall_Semester_programing\\primitive.cpp",
   "output": "CMakeFiles\\lab6.dir\\primitive.cpp.obj"
 }

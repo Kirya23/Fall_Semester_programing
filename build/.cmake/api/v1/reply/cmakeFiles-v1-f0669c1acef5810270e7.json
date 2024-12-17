@@ -153,26 +153,6 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/CTest.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/CTestUseLaunchers.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/CTestTargets.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "C:/msys64/mingw64/share/cmake/Modules/DartConfiguration.tcl.in"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
 			"path" : "C:/msys64/mingw64/share/cmake/Modules/CPack.cmake"
 		},
 		{
