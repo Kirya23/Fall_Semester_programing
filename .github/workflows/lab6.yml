@@ -26,8 +26,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ubuntu${{ github.run_number }}
-          release_name: Release ${{ github.run_number }} (ubuntu)
+          tag_name: ubuntu${{ github.run_number }}6
+          release_name: Release ${{ github.run_number }} (ubuntu)6
           draft: false
           prerelease: false 
       - name: Upload Release Asset (ubuntu)
@@ -60,8 +60,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.run_number }}
-        release_name: Release ${{ github.run_number }} (MacOS)
+        tag_name: ${{ github.run_number }}(MacOS)6
+        release_name: Release ${{ github.run_number }} (MacOS)6
         draft: false
         prerelease: false
     - name: Upload Release Asset (MacOS)
