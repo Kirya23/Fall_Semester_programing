@@ -1,4 +1,4 @@
-#include "view.h"
+#include "View.h"
 #include <iostream>
 
 void View::displayPrimitives(const std::vector<std::shared_ptr<Primitive>>& primitives) {
