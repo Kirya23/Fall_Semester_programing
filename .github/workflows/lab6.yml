@@ -12,65 +12,34 @@ jobs:
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           submodules: true
-
-      # Устанавливаем зависимости, включая SFML
-      - name: Install Dependencies
-        run: |
-            sudo apt-get update
-            sudo apt-get install -y build-essential cmake libsfml-dev
-
-      # Строим проект
-      - name: Build Project
-        run: |
-            rm -rf build
-            mkdir build
-            cd build
-            cmake .. -DCMAKE_BUILD_TYPE=Release
-            cmake --build . --config Release
-
-      # Запускаем тесты (если есть тесты, добавьте этот шаг)
-      - name: Run Tests
-        run: |
-            cd build
-            ctest -V # Добавлен -V для verbose output
-        # Проверьте опции и настройки в CMakeLists.txt
-
-      # Строим проект с конфигурацией Debug
-      - name: Build Debug
-        run: |
-          rm -rf build
-          mkdir build
-          cd build
-          cmake .. -DPATCH_VERSION=${{ github.run_number }} -DCMAKE_BUILD_TYPE=Debug
-          cmake --build . --config Debug
-          cmake --build . --target package --config Debug
-
-      # Создаем релиз на GitHub
-      - name: Create Release
-        id: create_release
+      - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
+      - run: cmake --build .
+      - run: cmake --build . --target package
+      - name: List files (ubuntu)
+        run: ls
+      - name: Create Release (ubuntu)
+        id: create_release_ubuntu
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.run_number }}-Linux6
-          release_name: Release ${{ github.run_number }} for linux
+          tag_name: ubuntu${{ github.run_number }}
+          release_name: Release ${{ github.run_number }} (ubuntu)
           draft: false
-          prerelease: false
-
-      # Загружаем релизный ассет (DEB-пакет для релизной сборки)
-      - name: Upload Release Asset
+          prerelease: false 
+      - name: Upload Release Asset (ubuntu)
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{steps.create_release.outputs.upload_url}}
-          asset_path: ./build/physics-0.0.${{ github.run_number }}-Linux.deb
-          asset_name: physics-0.0.${{ github.run_number }}-Linux.deb
-          asset_content_type: application/vnd.debian.binary-package
+          upload_url: ${{ steps.create_release_ubuntu.outputs.upload_url }}
+          asset_path: ./lab6-0.0.${{ github.run_number }}-Linux.zip
+          asset_name: lab6-0.0.${{ github.run_number }}-Linux.zip
+          asset_content_type: application/zip
 
   build_macos:
     runs-on: macos-latest
