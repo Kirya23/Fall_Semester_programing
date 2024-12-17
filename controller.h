@@ -4,7 +4,7 @@
 #include <memory>
 #include <vector>
 #include "model.h"
-#include "view.h"
+#include "View.h"
 class Controller {
 public:
     Controller();
